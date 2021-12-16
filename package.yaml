@@ -35,6 +35,9 @@ executables:
     - -with-rtsopts=-N
     dependencies:
     - hb
+    when:
+    - condition: false
+      other-modules: Paths_hb
 
 tests:
   hb-test:
@@ -46,3 +49,4 @@ tests:
     - -with-rtsopts=-N
     dependencies:
     - hb
+
