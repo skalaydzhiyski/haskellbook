@@ -25,7 +25,9 @@ source-repository head
 
 library
   exposed-modules:
+      BinaryTree
       Cipher
+      CipherKeyword
       Lib
   other-modules:
       Paths_hb
