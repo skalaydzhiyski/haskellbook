@@ -1,26 +1,60 @@
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
+{-# LANGUAGE FlexibleInstances #-}
 module Main where
+
 import Data.Time
+import Data.List
 
-data DatabaseItem = DbString String
-                  | DbNumber Integer
-                  | DbDate   UTCTime
-                  deriving (Eq, Ord, Show)
+data Price = Int
+  deriving (Eq, Show)
 
-theDatabase :: [DatabaseItem]
-theDatabase = 
-    [ DbDate (UTCTime (fromGregorian 1911 5 1) (secondsToDiffTime 34123))
-    , DbNumber 9001
-    , DbString "Hello, world!"
-    , DbDate (UTCTime (fromGregorian 1921 5 1) (secondsToDiffTime 34123))
-    ]
+data Size = Size (Int, Int)
+  deriving (Eq, Show)
 
-checkUTC (DbDate _ ) = True 
-checkUTC _           = False
+data Manufacturer =
+    Mini
+  | Mazda
+  | Tata
+  deriving (Show, Eq)
 
-filterDbDate :: [DatabaseItem] -> [UTCTime]
-filterDbDate = map (\(DbDate val) -> val) . filter checkUTC
+data Airline =
+    PapuAir
+  | Catapults
+  | TakeYourChances
+  deriving (Show, Eq)
 
+data Vehicle =
+    Car Manufacturer Price
+  | Plane Airline Size
+  deriving (Eq, Show)
+
+isCar :: Vehicle -> Bool
+isCar (Car _ _) = True
+isCar  _        = False
+
+cars :: [Vehicle] -> [Bool]
+cars = map isCar
+
+getManu :: Vehicle -> Manufacturer
+getManu (Car m _) = m
+getManu _         = error "no manufacturer present in the type class"
+
+class TooMany a where
+  tooMany :: a -> Bool
+
+instance TooMany Int where
+  tooMany n = n > 42
+
+instance (Num a, Ord a, TooMany a) => TooMany (a, b) where
+  tooMany x = (fst x) > 42
+
+newtype Goats = Goats Int deriving (Eq, Show, TooMany)
+newtype Cows = Cows Int deriving (Eq, Show)
+
+func :: Int -> Bool
+func n = n > 42
 
 main :: IO ()
 main = do
-  putStrLn "work"
+  putStrLn $ "res: "
+
