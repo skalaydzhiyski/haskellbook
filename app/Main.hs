@@ -1,60 +1,37 @@
-{-# LANGUAGE GeneralizedNewtypeDeriving #-}
-{-# LANGUAGE FlexibleInstances #-}
-module Main where
-
-import Data.Time
 import Data.List
 
-data Price = Int
-  deriving (Eq, Show)
+data Tree a =
+    Leaf
+  | Node (Tree a) a (Tree a)
+  deriving (Eq, Ord, Show)
 
-data Size = Size (Int, Int)
-  deriving (Eq, Show)
+mapTree :: (a -> b) -> Tree a -> Tree b
+mapTree _ Leaf = Leaf
+mapTree f (Node left value right) = 
+  Node (mapTree f left) (f value) (mapTree f right)
 
-data Manufacturer =
-    Mini
-  | Mazda
-  | Tata
-  deriving (Show, Eq)
+testTree :: Tree Integer
+testTree =
+  Node (Node Leaf 1 Leaf)
+  2
+  (Node Leaf 3 Leaf)
 
-data Airline =
-    PapuAir
-  | Catapults
-  | TakeYourChances
-  deriving (Show, Eq)
+inorder :: Tree a -> [a]
+inorder Leaf = []
+inorder (Node left val right) = inorder left ++ (val : inorder right)
 
-data Vehicle =
-    Car Manufacturer Price
-  | Plane Airline Size
-  deriving (Eq, Show)
+postorder :: Tree a -> [a]
+postorder Leaf = []
+postorder (Node left val right) = postorder left ++ postorder right ++ [val]
 
-isCar :: Vehicle -> Bool
-isCar (Car _ _) = True
-isCar  _        = False
+preorder :: Tree a -> [a]
+preorder Leaf = []
+preorder (Node left val right) = val : (preorder left ++ preorder right)
 
-cars :: [Vehicle] -> [Bool]
-cars = map isCar
+foldTree :: (a -> b -> b) -> b -> Tree a -> b
+foldTree f base t = foldr f base $ preorder t
 
-getManu :: Vehicle -> Manufacturer
-getManu (Car m _) = m
-getManu _         = error "no manufacturer present in the type class"
-
-class TooMany a where
-  tooMany :: a -> Bool
-
-instance TooMany Int where
-  tooMany n = n > 42
-
-instance (Num a, Ord a, TooMany a) => TooMany (a, b) where
-  tooMany x = (fst x) > 42
-
-newtype Goats = Goats Int deriving (Eq, Show, TooMany)
-newtype Cows = Cows Int deriving (Eq, Show)
-
-func :: Int -> Bool
-func n = n > 42
 
 main :: IO ()
-main = do
-  putStrLn $ "res: "
+main = undefined
 
