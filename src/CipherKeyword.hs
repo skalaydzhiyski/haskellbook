@@ -1,13 +1,10 @@
 module CipherKeyword where
 import Data.Char
 
-number = 1289
-
 -- helpers
 keyword     = "ALLY"
 cipher      = repeat keyword
 mapping s   = zip s (map ord $ concat cipher)
-
 start = ord 'a'
 end   = ord 'z'
 

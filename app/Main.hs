@@ -1,18 +1,46 @@
+import Data.Char
 import Data.List
 
--- examples on as-patterns (can be used to, for example, expand a list and then still be able to
---  refer to the list as a list and not (x:xs).. here we don't have access to the full list
---  while here -> lst@(x:xs) , we have access to both representations
+type Digit   = Char     -- the first digit on a keypad button
+type Options = String   -- list of options for a given keypad button
+type Presses = Int
+type Button  = (Digit, Options)
 
-f1 :: Show a => (a,b) -> IO (a,b)
-f1 xs@(x,_) = do
-  print x
-  return xs
+data Phone = Phone [Button] deriving (Show)
 
-doubleUp :: [a] -> [a]
-doubleUp lst@(x:_) = x : lst
+type Action  = (Digit, Presses)
 
--- TODO: use as-patterns to implement the subsequence problem from the book.
+options :: [Options]
+options = ["1", "abc2", "def3", "ghi4", "jkl5", "mno6", "pqrs7", "tuv8", "wxyz9", "*^", "+ 0", "#.,"]
+
+digits :: [Digit]
+digits  = "123456789*0#"
+
+upper :: Action
+upper = ('*',1)
+
+phone = Phone (zip digits options)
+
+findButton :: Phone -> Char -> Button
+findButton (Phone (x:xs)) c
+  | elem c $ snd x = x
+  | otherwise      = findButton (Phone xs) c
+
+makeAction :: Button -> Char -> Action
+makeAction (btn,chars) c_ = case elemIndex c_ chars of
+                              Nothing -> error "No char"
+                              Just v  -> (btn, v+1)
+
+parseChar :: Phone -> Char -> [Action]
+parseChar p@(Phone buttons) c
+  | isLower c = [makeAction (findButton p c) c]
+  | otherwise = upper:[makeAction (findButton p lower) lower]
+  where lower = toLower c
+
+-- TODO: Continue with the rest of the tasks about the phones exercise from the book.
+solve :: Phone -> String -> [Action]
+solve p s = concat $ map (parseChar p) s
+
 
 main :: IO ()
 main = undefined
