@@ -1,5 +1,6 @@
 import Data.Char
 import Data.List
+import Data.Ord
 
 type Digit   = Char     -- the first digit on a keypad button
 type Options = String   -- list of options for a given keypad button
@@ -37,7 +38,21 @@ parseChar p@(Phone buttons) c
   | otherwise = upper:[makeAction (findButton p lower) lower]
   where lower = toLower c
 
--- TODO: Continue with the rest of the tasks about the phones exercise from the book.
+fingerTap :: [Action] -> Presses
+fingerTap lst = sum (map snd lst)
+
+freq :: String -> [(Char, Int)]
+freq s = map (\x -> (head x, length x)) $ group . sort $ s
+
+mostCommonChar :: String -> Char 
+mostCommonChar s = chars !! (snd $ maximumBy (comparing fst) $ zip counts [0..])
+  where freqs  = freq s
+        chars  = map fst $ freqs
+        counts = map snd $ freqs
+
+
+
+
 solve :: Phone -> String -> [Action]
 solve p s = concat $ map (parseChar p) s
 
