@@ -1,0 +1,3129 @@
+
+./src/AsPatterns.hs,140
+module AsPatterns AsPatterns0,1
+f1 f16,7
+doubleUp doubleUp11,12
+isSubseqOf isSubseqOf15,16
+capitailizeWords capitailizeWords22,23
+
+./src/Lib.hs,42
+module LibLib0,1
+someFunc someFunc4,5
+
+./src/Phone.hs,459
+type Digit Digit5,6
+type Options Options6,7
+type Presses Presses7,8
+type Button Button8,9
+data Phone Phone10,11
+data Phone = Phone Phone10,11
+type Action Action12,13
+options options14,15
+digits digits17,18
+upper upper20,21
+phone phone23,24
+findButton findButton25,26
+makeAction makeAction30,31
+parseChar parseChar35,36
+fingerTap fingerTap41,42
+freq freq44,45
+mostCommonChar mostCommonChar47,48
+solve_phone solve_phone54,55
+
+./src/BinaryTree.hs,237
+module BinaryTree BinaryTree0,1
+data Tree Tree2,3
+    LeafLeaf3,4
+  | Node Node4,5
+mapTree mapTree7,8
+testTree testTree12,13
+inorder inorder18,19
+postorder postorder22,23
+preorder preorder26,27
+foldTree foldTree30,31
+
+./src/Cipher.hs,205
+module Cipher Cipher0,1
+shiftWidths shiftWidths4,5
+cipher cipher5,6
+start start6,7
+end end7,8
+mapping mapping8,9
+shift shift10,11
+encrypt encrypt16,17
+decrypt decrypt19,20
+run run22,23
+
+./src/CipherKeyword.hs,213
+module CipherKeyword CipherKeyword0,1
+keyword keyword4,5
+cipher cipher5,6
+mapping mapping6,7
+start start7,8
+end end8,9
+shift shift11,12
+encrypt encrypt17,18
+decrypt decrypt20,21
+run_ run_23,24
+
+./Setup.hs,15
+main main1,2
+
+./Useful.hs,15
+main main3,4
+
+./test/Spec.hs,15
+main main0,1
+
+./app/Main.hs,129
+module Main Main0,1
+data Expr Expr4,5
+    Lit Lit5,6
+  | Add Add6,7
+eval eval8,9
+print_ print_12,13
+main main16,17
+
+./haskellbook/27/27.09-debug.trace.hs,96
+inc inc2,3
+twice twice5,6
+howManyTimes howManyTimes8,9
+howManyTimes' howManyTimes'13,14
+
+./haskellbook/27/27.14-strict-list.hs,183
+module StrictList StrictList2,3
+data List List4,5
+data List a = NilNil4,5
+            | Cons Cons5,6
+take' take'8,9
+map' map'12,13
+repeat' repeat'15,16
+main main17,18
+
+./haskellbook/24/24.06-try-try.hs,149
+module TryTry TryTry2,3
+type DecimalOrFraction DecimalOrFraction8,9
+parseFraction parseFraction10,11
+parseNum parseNum17,18
+main main21,22
+
+./haskellbook/24/24.04-unit-of-success.hs,112
+parseInteger parseInteger2,3
+parseSuccess parseSuccess8,9
+parseFailure parseFailure11,12
+main main14,15
+
+./haskellbook/24/24.04-parsing-fractions.hs,286
+module Text.Fractions Text.Fractions2,3
+badFraction badFraction8,9
+alsoBad alsoBad11,12
+shouldWork shouldWork14,15
+shouldAlsoWork shouldAlsoWork17,18
+parseFraction parseFraction20,21
+virtuousFraction virtuousFraction27,28
+testVirtuous testVirtuous36,37
+main main44,45
+
+./haskellbook/24/24.06-quasimodo.hs,139
+module Quasimodo Quasimodo2,3
+type NumberOrString NumberOrString8,9
+parseNos parseNos10,11
+eitherOr eitherOr15,16
+main main22,23
+
+./haskellbook/24/24.03-learn-parsers.hs,342
+module LearnParsers LearnParsers0,1
+stop stop5,6
+one one8,9
+one' one'11,12
+type Token Token14,15
+type    Parser' Parser'16,17
+newtype Parser'' Parser''17,18
+newtype Parser''  a = P P17,18
+type    Parser''' Parser'''18,19
+oneTwo oneTwo20,21
+oneTwo' oneTwo'23,24
+testParse testParse26,27
+pNL pNL29,30
+main main32,33
+
+./haskellbook/24/24.11-chapter-exercises.hs,439
+data NumberOrString NumberOrString5,6
+data NumberOrString = NOSS NOSS5,6
+                    | NOSI NOSI6,7
+type Major Major9,10
+type Minor Minor10,11
+type Patch Patch11,12
+type Release Release12,13
+type Metadata Metadata13,14
+data SemVer SemVer15,16
+data SemVer = SemVer SemVer15,16
+parseNOS parseNOS18,19
+parseMeta parseMeta21,22
+skipDelimiter skipDelimiter29,30
+parseSemVer parseSemVer32,33
+main main42,43
+
+./haskellbook/24/24.10-marshalling.hs,838
+module Marshalling Marshalling3,4
+sectionJson sectionJson13,14
+data TestData TestData20,21
+data TestData = TestDataTestData20,21
+    { section section21,22
+    , what what22,23
+newtype Host Host25,26
+type Annotation Annotation28,29
+data Color Color30,31
+data Color = Red Red30,31
+           | Blue Blue31,32
+           | Yellow Yellow32,33
+instance FromJSON FromJSON TestData35,36
+  parseJSON parseJSON36,37
+instance FromJSON FromJSON Host39,40
+  parseJSON parseJSON40,41
+instance FromJSON FromJSON Color43,44
+  parseJSON parseJSON44,45
+data NumberOrString NumberOrString49,50
+data NumberOrString = Numba Numba49,50
+                    | Stringy Stringy50,51
+instance FromJSON FromJSON NumberOrString53,54
+  parseJSON parseJSON54,55
+dec dec60,61
+eitherDec eitherDec63,64
+main main66,67
+
+./haskellbook/24/24.03-parsing-practice.hs,233
+one one4,5
+oneTwo oneTwo7,8
+two two10,11
+testParse testParse13,14
+pNL pNL16,17
+testEOF testEOF21,22
+three three24,25
+testString testString29,30
+strParser strParser32,33
+rStrParser rStrParser37,38
+main main45,46
+
+./haskellbook/24/24.09-backtracking.hs,177
+module BT BT2,3
+trifP trifP11,12
+parsecP parsecP14,15
+attoP attoP17,18
+nobackParse nobackParse20,21
+tryParse tryParse23,24
+tryAnnot tryAnnot26,27
+main main30,31
+
+./haskellbook/24/24.06-alt-parsing.hs,147
+module AltParsing AltParsing0,1
+type NumberOrString NumberOrString5,6
+a a7,8
+b b10,11
+c c13,14
+parseNos parseNos16,17
+main main19,20
+
+./haskellbook/24/24.07-parsing-configuration-files.hs,846
+module Data.Ini Data.Ini3,4
+headerEx headerEx16,17
+newtype Header Header19,20
+parseBracketPair parseBracketPair22,23
+parseHeader parseHeader25,26
+assignmentEx assignmentEx28,29
+type Name Name31,32
+type Value Value32,33
+type Assignments Assignments33,34
+parseAssignment parseAssignment35,36
+skipEOL skipEOL43,44
+commentEx commentEx46,47
+commentEx' commentEx'50,51
+skipComments skipComments53,54
+sectionEx sectionEx59,60
+sectionEx' sectionEx'62,63
+Chris=Chris66,67
+sectionEx'' sectionEx''69,70
+host=host73,74
+alias=alias74,75
+red=red77,78
+data Section Section80,81
+data Section = Section Section80,81
+newtype Config Config83,84
+skipWhitespace skipWhitespace86,87
+parseSection parseSection89,90
+rollup rollup98,99
+parseIni parseIni101,102
+maybeSuccess maybeSuccess107,108
+main main111,112
+
+./haskellbook/31/31.03-fingerd/src/Debug.hs,66
+module Main Main0,1
+logAndEcho logAndEcho6,7
+main main17,18
+
+./haskellbook/31/31.03-fingerd/src/Main.hs,903
+module Main Main4,5
+data User User22,23
+data User = UserUser22,23
+    { userId userId23,24
+    , username username24,25
+    , shell shell25,26
+    , homeDirectory homeDirectory26,27
+    , realName realName27,28
+    , phone phone28,29
+instance FromRow FromRow User31,32
+  fromRow fromRow32,33
+instance ToRow ToRow User39,40
+  toRow toRow40,41
+createUsers createUsers49,50
+insertUser insertUser61,62
+allUsers allUsers64,65
+getUserQuery getUserQuery67,68
+data DuplicateData DuplicateData70,71
+data DuplicateData = DuplicateDataDuplicateData70,71
+instance Exception Exception DuplicateData73,74
+type UserRow UserRow75,76
+getUser getUser77,78
+createDatabase createDatabase85,86
+returnUsers returnUsers103,104
+formatUser formatUser110,111
+returnUser returnUser120,121
+handleQuery handleQuery129,130
+handleQueries handleQueries136,137
+main main144,145
+
+./haskellbook/31/31.03-fingerd/Setup.hs,15
+main main1,2
+
+./haskellbook/31/31.05-chapter-exercises.hs,0
+
+./haskellbook/18/18.07-chapter-exercises-1.hs,2223
+type SSI SSI4,5
+data Nope Nope8,9
+data Nope a = NopeDotJpgNopeDotJpg8,9
+instance Functor Functor Nope11,12
+  fmap fmap12,13
+instance Applicative Applicative Nope14,15
+  pure pure15,16
+  _ _16,17
+instance Monad Monad Nope18,19
+  return return19,20
+  _ _20,21
+instance Arbitrary Arbitrary a => Arbitrary (Nope a)22,23
+  arbitrary arbitrary23,24
+instance Eq Eq a => EqProp (Nope a)25,26
+  (=(=-=)26,27
+nope nope28,29
+data PhhhbbtttEither PhhhbbtttEither32,33
+data PhhhbbtttEither b a = Left' Left'32,33
+                         | Right' Right'33,34
+instance Functor Functor (PhhhbbtttEither b)36,37
+  fmap fmap37,38
+instance Applicative Applicative (PhhhbbtttEither b)40,41
+  pure pure41,42
+  Left' Left'42,43
+  Right' Right'43,44
+  _ _44,45
+instance Monad Monad (PhhhbbtttEither b)46,47
+  return return47,48
+  Left' Left'48,49
+  Right' Right'49,50
+instance (A(Arbitrary b, Arbitrary a) => Arbitrary (PhhhbbtttEither b a)51,52
+  arbitrary arbitrary52,53
+instance (E(Eq b, Eq a) => EqProp (PhhhbbtttEither b a)59,60
+  (=(=-=)60,61
+peither peither62,63
+newtype Identity Identity66,67
+instance Functor Functor Identity69,70
+  fmap fmap70,71
+instance Applicative Applicative Identity72,73
+  pure pure73,74
+  Identity Identity74,75
+instance Monad Monad Identity76,77
+  return return77,78
+  Identity Identity78,79
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)80,81
+  arbitrary arbitrary81,82
+instance Eq Eq a => EqProp (Identity a)85,86
+  (=(=-=)86,87
+identity identity88,89
+data List List92,93
+data List a = NilNil92,93
+            | Cons Cons93,94
+instance Functor Functor List96,97
+  fmap fmap97,98
+instance Monoid Monoid (List a)100,101
+  mempty mempty101,102
+  mappend mappend102,103
+instance Applicative Applicative List105,106
+  pure pure106,107
+  _ _107,108
+  Nil Nil108,109
+  Cons Cons109,110
+instance Monad Monad List111,112
+  return return112,113
+  Nil Nil113,114
+  Cons Cons114,115
+instance Arbitrary Arbitrary a => Arbitrary (List a)116,117
+  arbitrary arbitrary117,118
+instance Eq Eq a => EqProp (List a)121,122
+  (=(=-=)122,123
+list list124,125
+main main128,129
+
+./haskellbook/18/18.04-maybe-monad.hs,370
+data Cow Cow0,1
+data Cow = CowCow0,1
+    { name name1,2
+    , age age2,3
+    , weight weight3,4
+noEmpty noEmpty6,7
+noNegative noNegative10,11
+weightCheck weightCheck14,15
+mkSphericalCow mkSphericalCow21,22
+mkSphericalCow' mkSphericalCow'33,34
+mkSphericalCow'' mkSphericalCow''52,53
+f f59,60
+g g63,64
+h h68,69
+doSomething' doSomething'71,72
+
+./haskellbook/18/18.04-either-monad.hs,363
+data Sum Sum0,1
+data Sum a b = First First0,1
+             | Second Second1,2
+instance Functor Functor (Sum a)4,5
+  fmap fmap5,6
+instance Applicative Applicative (Sum a)8,9
+  pure pure9,10
+  First First10,11
+  _ _11,12
+  Second Second12,13
+instance Monad Monad (Sum a)14,15
+  return return15,16
+  First First16,17
+  Second Second17,18
+
+./haskellbook/18/18.07-chapter-exercises-2.hs,85
+j j4,5
+l1 l19,10
+l2 l214,15
+a a19,20
+meh meh24,25
+flipType flipType30,31
+
+./haskellbook/18/18.05-bad-monad.hs,523
+module BadMonad BadMonad0,1
+data CountMe CountMe6,7
+data CountMe a = CountMe CountMe6,7
+instance Functor Functor CountMe9,10
+  fmap fmap10,11
+instance Applicative Applicative CountMe12,13
+  pure pure13,14
+  CountMe CountMe14,15
+instance Monad Monad CountMe16,17
+  return return17,18
+  CountMe CountMe18,19
+instance Arbitrary Arbitrary a => Arbitrary (CountMe a)21,22
+  arbitrary arbitrary22,23
+instance Eq Eq a => EqProp (CountMe a)24,25
+  (=(=-=)25,26
+trigger trigger27,28
+main main30,31
+
+./haskellbook/18/18.03-do-syntax-and-monads.hs,289
+sequencing sequencing2,3
+sequencing' sequencing'7,8
+sequencing'' sequencing''12,13
+binding binding18,19
+binding' binding'23,24
+bindingAndSequencing bindingAndSequencing26,27
+bindingAndSequencing' bindingAndSequencing'32,33
+twoBinds twoBinds38,39
+twoBinds' twoBinds'46,47
+
+./haskellbook/18/18.02-bind.hs,15
+bind bind3,4
+
+./haskellbook/12/12.05-validate-the-word.hs,138
+newtype Word' Word'3,4
+vowels vowels6,7
+vowelConsonantCounter vowelConsonantCounter9,10
+getSums getSums14,15
+mkWord mkWord17,18
+
+./haskellbook/12/12.05-string-processing.hs,225
+notThe notThe5,6
+swapOutThe swapOutThe10,11
+replaceThe replaceThe14,15
+wordsToMaybes wordsToMaybes20,21
+countTheBeforeVowel countTheBeforeVowel23,24
+addOneIfVowel addOneIfVowel35,36
+countVowels countVowels40,41
+
+./haskellbook/12/12.03-bleating-either.hs,388
+type Name Name0,1
+type Age Age1,2
+type ValidatePerson ValidatePerson2,3
+data Person Person4,5
+data Person = Person Person4,5
+data PersonInvalid PersonInvalid7,8
+data PersonInvalid = NameEmptyNameEmpty7,8
+                   | AgeTooLowAgeTooLow8,9
+toString toString11,12
+ageOkay ageOkay15,16
+nameOkay nameOkay20,21
+mkPerson mkPerson25,26
+mkPerson' mkPerson'31,32
+
+./haskellbook/12/12.05-unfolds.hs,85
+myIterate myIterate2,3
+myUnfoldr myUnfoldr7,8
+betterIterate betterIterate15,16
+
+./haskellbook/12/12.05-its-only-natural.hs,132
+data Nat Nat1,2
+data Nat = ZeroZero1,2
+         | Succ Succ2,3
+natToInteger natToInteger5,6
+integerToNat integerToNat9,10
+
+./haskellbook/12/12.05-binary-tree.hs,149
+data BinaryTree BinaryTree2,3
+data BinaryTree a = LeafLeaf2,3
+                  | Node Node3,4
+unfold unfold12,13
+treeBuild treeBuild20,21
+
+./haskellbook/12/12.05-small-library-for-either.hs,176
+lefts' lefts'3,4
+rights' rights'11,12
+partitionEithers' partitionEithers'18,19
+eitherMaybe' eitherMaybe'25,26
+either' either'31,32
+eitherMaybe'' eitherMaybe''37,38
+
+./haskellbook/12/12.02-how-i-learned-to-stop-worrying-and-love-nothing.hs,147
+ifEvenAdd2 ifEvenAdd20,1
+type Name Name5,6
+type Age Age6,7
+data Person Person8,9
+data Person = Person Person8,9
+mkPerson mkPerson11,12
+
+./haskellbook/12/12.05-small-library-for-maybe.hs,210
+isJust isJust2,3
+isNothing isNothing6,7
+mayybee mayybee12,13
+fromMaybe fromMaybe18,19
+listToMaybe listToMaybe24,25
+maybeToList maybeToList28,29
+catMaybes catMaybes34,35
+flipMaybe flipMaybe42,43
+
+./haskellbook/12/12.05-determine-the-kinds.hs,21
+id id2,3
+r r9,10
+
+./haskellbook/15/15.10-optional-monoid.hs,190
+data Optional Optional2,3
+data Optional a = NadaNada2,3
+                | Only Only3,4
+instance Monoid Monoid a => Monoid (Optional a)6,7
+  mempty mempty7,8
+  mappend mappend8,9
+
+./haskellbook/15/15.12-maybe-another-monoid.hs,693
+data Optional Optional3,4
+data Optional a = NadaNada3,4
+                | Only Only4,5
+instance Monoid Monoid a => Monoid (Optional a)7,8
+  mempty mempty8,9
+  mappend mappend9,10
+monoidAssoc monoidAssoc14,15
+monoidLeftIdentity monoidLeftIdentity17,18
+monoidRightIdentity monoidRightIdentity20,21
+newtype First' First'23,24
+                 { getFirst' getFirst'24,25
+instance Monoid Monoid a => Monoid (First' a)27,28
+  mempty mempty28,29
+  mappend mappend29,30
+instance Arbitrary Arbitrary a => Arbitrary (First' a)31,32
+  arbitrary arbitrary32,33
+firstMappend firstMappend38,39
+type FirstMappend FirstMappend41,42
+type FstId FstId42,43
+main main44,45
+
+./haskellbook/15/15.15-semigroup-exercises.hs,3376
+data Trivial Trivial6,7
+data Trivial = TrivialTrivial6,7
+instance Semigroup Semigroup Trivial9,10
+  _ _10,11
+instance Arbitrary Arbitrary Trivial12,13
+  arbitrary arbitrary13,14
+semigroupAssoc semigroupAssoc15,16
+type TrivAssoc TrivAssoc18,19
+newtype Identity Identity22,23
+instance Semigroup Semigroup a => Semigroup (Identity a)25,26
+  Identity Identity26,27
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)28,29
+  arbitrary arbitrary29,30
+type IdAssoc IdAssoc33,34
+data Two Two37,38
+data Two a b = Two Two37,38
+instance (S(Semigroup a, Semigroup b) => Semigroup (Two a b)40,41
+  Two Two41,42
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Two a b)43,44
+  arbitrary arbitrary44,45
+type TwoAssoc TwoAssoc49,50
+data Three Three56,57
+data Three a b c = Three Three56,57
+instance (S(Semigroup a, Semigroup b, Semigroup c) => Semigroup (Three a b c)59,60
+  Three Three61,62
+instance (A(Arbitrary a, Arbitrary b, Arbitrary c) => Arbitrary (Three a b c)63,64
+  arbitrary arbitrary65,66
+type ThreeAssoc ThreeAssoc71,72
+data Four Four78,79
+data Four a b c d = Four Four78,79
+instance (S(Semigroup a, Semigroup b, Semigroup c, Semigroup d) => Semigroup (Four a b c d)81,82
+  Four Four83,84
+instance (A(Arbitrary a, Arbitrary b, Arbitrary c, Arbitrary d) => Arbitrary (Four a b c d)86,87
+  arbitrary arbitrary88,89
+type FourAssoc FourAssoc95,96
+newtype BoolConj BoolConj102,103
+instance Semigroup Semigroup BoolConj105,106
+  BoolConj BoolConj106,107
+instance Arbitrary Arbitrary BoolConj110,111
+  arbitrary arbitrary111,112
+type BoolConjAssoc BoolConjAssoc115,116
+newtype BoolDisj BoolDisj123,124
+instance Semigroup Semigroup BoolDisj126,127
+  BoolDisj BoolDisj127,128
+instance Arbitrary Arbitrary BoolDisj131,132
+  arbitrary arbitrary132,133
+type BoolDisjAssoc BoolDisjAssoc136,137
+data Or Or143,144
+data Or a b = Fst Fst143,144
+            | Snd Snd144,145
+instance (S(Semigroup a, Semigroup b) => Semigroup (Or a b)147,148
+  Fst Fst148,149
+  Snd Snd150,151
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Or a b)153,154
+  arbitrary arbitrary154,155
+type OrAssoc OrAssoc161,162
+newtype Combine Combine170,171
+                    { unCombine unCombine171,172
+instance Show Show (Combine a b)173,174
+  show show174,175
+instance Semigroup Semigroup b => Semigroup (Combine a b)176,177
+  Combine Combine177,178
+instance (C(CoArbitrary a, Arbitrary b) => Arbitrary (Combine a b)179,180
+  arbitrary arbitrary180,181
+type CombAssoc CombAssoc184,185
+newtype Comp Comp192,193
+               { unComp unComp193,194
+instance Semigroup Semigroup a => Semigroup (Comp a)195,196
+  Comp Comp196,197
+instance (C(CoArbitrary a, Arbitrary a) => Arbitrary (Comp a)198,199
+  arbitrary arbitrary199,200
+type CompAssoc CompAssoc203,204
+data Validation Validation210,211
+data Validation a b = Failure Failure210,211
+                    | Success Success211,212
+instance Semigroup Semigroup a => Semigroup (Validation a b)214,215
+  Success Success215,216
+  Failure Failure216,217
+  Success Success217,218
+  Failure Failure218,219
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Validation a b)220,221
+  arbitrary arbitrary221,222
+type ValidAssoc ValidAssoc228,229
+runValidation runValidation233,234
+main main246,247
+
+./haskellbook/15/15.15-monoid-exercises.hs,3411
+semigroupAssoc semigroupAssoc3,4
+monoidAssoc monoidAssoc6,7
+monoidLeftIdentity monoidLeftIdentity9,10
+monoidRightIdentity monoidRightIdentity12,13
+data Trivial Trivial17,18
+data Trivial = TrivialTrivial17,18
+instance Semigroup Semigroup Trivial20,21
+  _ _21,22
+instance Monoid Monoid Trivial23,24
+  mempty mempty24,25
+  mappend mappend25,26
+instance Arbitrary Arbitrary Trivial27,28
+  arbitrary arbitrary28,29
+type TrivAssoc TrivAssoc30,31
+type TrivId TrivId31,32
+newtype Identity Identity35,36
+instance Semigroup Semigroup a => Semigroup (Identity a)38,39
+  Identity Identity39,40
+instance (S(Semigroup a, Monoid a) => Monoid (Identity a)41,42
+  mempty mempty42,43
+  mappend mappend43,44
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)45,46
+  arbitrary arbitrary46,47
+type IdAssoc IdAssoc50,51
+type IdId IdId51,52
+data Two Two55,56
+data Two a b = Two Two55,56
+instance (S(Semigroup a, Semigroup b) => Semigroup (Two a b)58,59
+  Two Two59,60
+instance ( (Semigroup a, Monoid a, Semigroup b, Monoid b) => Monoid (Two a b)61,62
+  mempty mempty64,65
+  mappend mappend65,66
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Two a b)67,68
+  arbitrary arbitrary68,69
+type TwoAssoc TwoAssoc73,74
+type TwoId TwoId77,78
+data Three Three81,82
+data Three a b c = Three Three81,82
+instance ( (Semigroup a, Semigroup b, Semigroup c) => Semigroup (Three a b c)84,85
+  Three Three88,89
+instance ( (Semigroup a, Monoid a, Semigroup b, Monoid b, Semigroup c, Monoid c) => Monoid (Three a b c)91,92
+  mempty mempty95,96
+  mappend mappend96,97
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c) => Arbitrary (Three a b c)98,99
+  arbitrary arbitrary102,103
+type ThreeAssoc ThreeAssoc108,109
+type ThreeId ThreeId112,113
+data Four Four116,117
+data Four a b c d = Four Four116,117
+instance ( (Semigroup a, Semigroup b, Semigroup c, Semigroup d) => Semigroup (Four a b c d)119,120
+  Four Four124,125
+instance ( (Semigroup a, Monoid a, Semigroup b, Monoid b, Semigroup c, Monoid c, Semigroup d, Monoid d) => Monoid (Four a b c d)127,128
+  mempty mempty132,133
+  mappend mappend133,134
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c, Arbitrary d) => Arbitrary (Four a b c d)135,136
+  arbitrary arbitrary140,141
+type FourAssoc FourAssoc147,148
+type FourId FourId151,152
+newtype BoolConj BoolConj155,156
+instance Semigroup Semigroup BoolConj158,159
+  BoolConj BoolConj159,160
+instance Monoid Monoid BoolConj163,164
+  mempty mempty164,165
+  mappend mappend165,166
+instance Arbitrary Arbitrary BoolConj167,168
+  arbitrary arbitrary168,169
+type BoolConjAssoc BoolConjAssoc172,173
+type BoolConjId BoolConjId176,177
+newtype BoolDisj BoolDisj180,181
+instance Semigroup Semigroup BoolDisj183,184
+  BoolDisj BoolDisj184,185
+instance Monoid Monoid BoolDisj188,189
+  mempty mempty189,190
+  mappend mappend190,191
+instance Arbitrary Arbitrary BoolDisj192,193
+  arbitrary arbitrary193,194
+type BoolDisjAssoc BoolDisjAssoc197,198
+type BoolDisjId BoolDisjId201,202
+newtype Mem Mem207,208
+                { runMem runMem208,209
+instance Semigroup Semigroup a => Semigroup (Mem s a)210,211
+  Mem Mem211,212
+instance (S(Semigroup a, Monoid a) => Monoid (Mem s a)216,217
+  mempty mempty217,218
+  mappend mappend218,219
+f' f'220,221
+qcMem qcMem223,224
+main main233,234
+
+./haskellbook/15/15.10-orphan-instance/ListyInstances.hs,124
+module ListyInstances ListyInstances0,1
+instance Monoid Monoid (Listy a)5,6
+  mempty mempty6,7
+  mappend mappend7,8
+
+./haskellbook/15/15.10-orphan-instance/Listy.hs,24
+module Listy Listy0,1
+
+./haskellbook/15/15.11-madness.hs,196
+type Verb Verb2,3
+type Adjective Adjective3,4
+type Adverb Adverb4,5
+type Noun Noun5,6
+type Exclamation Exclamation6,7
+madlibbin' madlibbin'8,9
+madlibbinBetter' madlibbinBetter'15,16
+
+./haskellbook/03/print-3.hs,104
+module Print3 Print30,1
+myGreeting myGreeting2,3
+hello hello5,6
+world world8,9
+main main11,12
+
+./haskellbook/03/print-1.hs,41
+module Print1 Print10,1
+main main2,3
+
+./haskellbook/03/print-2.hs,41
+module Print2 Print20,1
+main main2,3
+
+./haskellbook/03/top-or-local.hs,106
+module TopOrLocal TopOrLocal0,1
+topLevelFunction topLevelFunction2,3
+topLevelValue topLevelValue7,8
+
+./haskellbook/03/print-3-flipped.hs,118
+module Print3Flipped Print3Flipped0,1
+myGreeting myGreeting2,3
+hello hello5,6
+world world8,9
+main main11,12
+
+./haskellbook/09/09.10-filtering.hs,115
+multiplesOfThree multiplesOfThree1,2
+multiplesOfThreeLength multiplesOfThreeLength6,7
+myFilter myFilter11,12
+
+./haskellbook/09/09.08-is-it-in-normal-form.hs,0
+
+./haskellbook/09/09.06-thy-fearful-symmetry.hs,336
+module PoemLines PoemLines0,1
+myWords myWords7,8
+firstSen firstSen14,15
+secondSen secondSen15,16
+thirdSen thirdSen16,17
+fourthSen fourthSen17,18
+sentences sentences18,19
+myLines myLines20,21
+shouldEqual shouldEqual25,26
+breakOnChar breakOnChar34,35
+myWords' myWords'39,40
+myLines' myLines'42,43
+main main45,46
+
+./haskellbook/09/09.05-enum-from-to.hs,84
+eftBool eftBool0,1
+eftOrd eftOrd6,7
+eftInt eftInt15,16
+eftChar eftChar20,21
+
+./haskellbook/09/09.09-more-bottoms.hs,54
+itIsMystery itIsMystery22,23
+mapBool mapBool37,38
+
+./haskellbook/09/09.11-zipping-lists.hs,57
+zip' zip'1,2
+zipWith' zipWith'6,7
+zip'' zip''11,12
+
+./haskellbook/09/09.12-writing-your-own-standard-functions.hs,300
+myOrd myOrd1,2
+myAny myAny7,8
+myElem myElem13,14
+myElem' myElem'17,18
+myReverse myReverse22,23
+squish squish28,29
+squishMap squishMap34,35
+squishAgain squishAgain40,41
+myMaximumBy myMaximumBy45,46
+myMinimumBy myMinimumBy55,56
+myMaximum myMaximum65,66
+myMinimum myMinimum68,69
+
+./haskellbook/09/09.08-will-it-blow-up.hs,0
+
+./haskellbook/09/09.12-ciphers.hs,256
+module Cipher Cipher0,1
+tooHigh tooHigh4,5
+tooLow tooLow7,8
+trim trim10,11
+pad pad13,14
+shiftInt shiftInt16,17
+unshiftInt unshiftInt19,20
+shiftWrap shiftWrap22,23
+unshiftWrap unshiftWrap27,28
+caesar caesar32,33
+unCaesar unCaesar35,36
+
+./haskellbook/09/09.07-square-cube.hs,147
+mySqr mySqr0,1
+myCube myCube3,4
+sqrCubePairs sqrCubePairs8,9
+sqrCubePairs' sqrCubePairs'13,14
+sqrCubePairsLength sqrCubePairsLength18,19
+
+./haskellbook/09/09.12-data-char.hs,139
+filterUpper filterUpper10,11
+caps caps15,16
+allCaps allCaps21,22
+toUpperFirst toUpperFirst27,28
+toUpperFirst' toUpperFirst'32,33
+
+./haskellbook/09/09.07-comprehend-thy-lists.hs,90
+mySqr mySqr0,1
+pairOfIntegers pairOfIntegers3,4
+pairOfIntegers' pairOfIntegers'9,10
+
+./haskellbook/26/26.05-state-t.hs,327
+newtype StateT StateT0,1
+  { runStateT runStateT1,2
+instance Functor Functor m => Functor (StateT s m)5,6
+  fmap fmap6,7
+instance Monad Monad m => Applicative (StateT s m)10,11
+  pure pure11,12
+  StateT StateT12,13
+instance Monad Monad m => Monad (StateT s m)19,20
+  return return20,21
+  StateT StateT21,22
+
+./haskellbook/26/26.14-fix-the-code.hs,75
+isValid isValid3,4
+maybeExcite maybeExcite6,7
+doExcite doExcite13,14
+
+./haskellbook/26/26.14-hit-counter.hs,249
+module Main Main2,3
+data Config Config15,16
+data Config = ConfigConfig15,16
+    { counts counts16,17
+    , prefix prefix17,18
+type Scotty Scotty20,21
+type Handler Handler21,22
+bumpBoomp bumpBoomp23,24
+app app28,29
+main main43,44
+
+./haskellbook/26/26.08-outer-inner.hs,153
+module OuterInner OuterInner0,1
+embedded embedded6,7
+maybeUnwrap maybeUnwrap9,10
+eitherUnwrap eitherUnwrap12,13
+readerUnwrap readerUnwrap15,16
+
+./haskellbook/26/26.09-scotty.hs,43
+module Scotty Scotty2,3
+main main12,13
+
+./haskellbook/26/26.04-reader-t.hs,344
+newtype ReaderT ReaderT0,1
+  { runReaderT runReaderT1,2
+instance Functor Functor m => Functor (ReaderT r m)3,4
+  fmap fmap4,5
+instance Applicative Applicative m => Applicative (ReaderT r m)6,7
+  pure pure7,8
+  ReaderT ReaderT8,9
+instance Monad Monad m => Monad (ReaderT r m)10,11
+  return return11,12
+  ReaderT ReaderT12,13
+
+./haskellbook/26/26.09-lift-more.hs,253
+newtype EitherT EitherT4,5
+  { runEitherT runEitherT5,6
+instance MonadTrans MonadTrans (EitherT e)7,8
+  lift lift8,9
+newtype StateT StateT12,13
+  { runStateT runStateT13,14
+instance MonadTrans MonadTrans (StateT s)15,16
+  lift lift16,17
+
+./haskellbook/26/26.10-some-instances.hs,1470
+newtype MaybeT MaybeT5,6
+  { runMaybeT runMaybeT6,7
+instance Functor Functor m => Functor (MaybeT m)8,9
+  fmap fmap9,10
+instance Applicative Applicative m => Applicative (MaybeT m)11,12
+  pure pure12,13
+  MaybeT MaybeT13,14
+instance Monad Monad m => Monad (MaybeT m)15,16
+  return return16,17
+  MaybeT MaybeT17,18
+instance MonadTrans MonadTrans MaybeT23,24
+  lift lift24,25
+instance MonadIO MonadIO m => MonadIO (MaybeT m)26,27
+  liftIO liftIO27,28
+newtype ReaderT ReaderT31,32
+  { runReaderT runReaderT32,33
+instance Functor Functor m => Functor (ReaderT r m)34,35
+  fmap fmap35,36
+instance Applicative Applicative m => Applicative (ReaderT r m)37,38
+  pure pure38,39
+  ReaderT ReaderT39,40
+instance Monad Monad m => Monad (ReaderT r m)41,42
+  return return42,43
+  ReaderT ReaderT43,44
+instance MonadTrans MonadTrans (ReaderT r)47,48
+  lift lift48,49
+instance MonadIO MonadIO m => MonadIO (ReaderT r m)50,51
+  liftIO liftIO51,52
+newtype StateT StateT56,57
+  { runStateT runStateT57,58
+instance Functor Functor m => Functor (StateT s m)59,60
+  fmap fmap60,61
+instance Monad Monad m => Applicative (StateT s m)62,63
+  pure pure63,64
+  StateT StateT64,65
+instance Monad Monad m => Monad (StateT s m)69,70
+  return return70,71
+  StateT StateT71,72
+instance MonadTrans MonadTrans (StateT s)75,76
+  lift lift76,77
+instance MonadIO MonadIO m => MonadIO (StateT s m)80,81
+  liftIO liftIO81,82
+
+./haskellbook/26/26.03-either-t.hs,404
+newtype EitherT EitherT0,1
+  { runEitherT runEitherT1,2
+instance Functor Functor m => Functor (EitherT e m)5,6
+  fmap fmap6,7
+instance Applicative Applicative m => Applicative (EitherT e m)10,11
+  pure pure11,12
+  EitherT EitherT12,13
+instance Monad Monad m => Monad (EitherT e m)16,17
+  return return17,18
+  EitherT EitherT18,19
+swapEitherT swapEitherT26,27
+eitherT eitherT34,35
+
+./haskellbook/26/26.14-write-the-code.hs,123
+rDec rDec6,7
+rDec' rDec'11,12
+rShow rShow16,17
+rPrintAndInc rPrintAndInc21,22
+sPrintIncAccum sPrintIncAccum28,29
+
+./haskellbook/26/26.08-wrap-it-up.hs,145
+embedded embedded4,5
+maybeUnwrap maybeUnwrap7,8
+eitherUnwrap eitherUnwrap10,11
+readerUnwrap readerUnwrap13,14
+embedded' embedded'16,17
+
+./haskellbook/26/26.02-maybe-t.hs,327
+newtype MaybeT MaybeT0,1
+  { runMaybeT runMaybeT1,2
+instance Functor Functor m => Functor (MaybeT m)3,4
+  fmap fmap4,5
+instance Applicative Applicative m => Applicative (MaybeT m)6,7
+  pure pure7,8
+  MaybeT MaybeT8,9
+instance Monad Monad m => Monad (MaybeT m)10,11
+  return return11,12
+  MaybeT MaybeT12,13
+
+./haskellbook/26/26.11-except-t.hs,101
+module Main Main2,3
+param' param'11,12
+type Reco Reco16,17
+tshow tshow18,19
+main main21,22
+
+./haskellbook/13/chapter-exercises/palindrome.hs,99
+normalizeString normalizeString4,5
+checkSentence checkSentence7,8
+palindrome palindrome10,11
+
+./haskellbook/13/chapter-exercises/person.hs,347
+type Name Name0,1
+type Age Age1,2
+data Person Person3,4
+data Person = Person Person3,4
+data PersonInvalid PersonInvalid6,7
+data PersonInvalid = NameEmptyNameEmpty6,7
+                   | AgeTooLowAgeTooLow7,8
+                   | PersonInvalidUnknown PersonInvalidUnknown8,9
+mkPerson mkPerson11,12
+gimmePerson gimmePerson22,23
+
+./haskellbook/13/notes.hs,0
+
+./haskellbook/13/hello/src/Hello.hs,46
+module HelloHello0,1
+sayHello sayHello4,5
+
+./haskellbook/13/hello/src/DogsRule.hs,44
+module DogsRuleDogsRule0,1
+dogs dogs4,5
+
+./haskellbook/13/hello/Setup.hs,15
+main main1,2
+
+./haskellbook/13/hello/exe/Main.hs,37
+module Main Main0,1
+main main6,7
+
+./haskellbook/13/hangman/src/Main.hs,653
+module Main Main0,1
+newtype WordList WordList9,10
+allWords allWords17,18
+minWordLength minWordLength29,30
+maxWordLength maxWordLength32,33
+gameWords gameWords35,36
+randomWord randomWord54,55
+randomWord' randomWord'65,66
+renderPuzzleChar renderPuzzleChar68,69
+data Puzzle Puzzle72,73
+data Puzzle = Puzzle Puzzle72,73
+instance Show Show Puzzle74,75
+  show show75,76
+freshPuzzle freshPuzzle79,80
+charInWord charInWord82,83
+alreadyGuessed alreadyGuessed85,86
+fillInCharacter fillInCharacter88,89
+handleGuess handleGuess98,99
+gameOver gameOver112,113
+gameWin gameWin120,121
+runGame runGame127,128
+main main138,139
+
+./haskellbook/13/hangman/Setup.hs,15
+main main1,2
+
+./haskellbook/19/19.06-shawty/Setup.hs,15
+main main1,2
+
+./haskellbook/19/19.06-shawty/app/Main.hs,315
+module Main Main2,3
+alphaNum alphaNum14,15
+randomElement randomElement17,18
+shortyGen shortyGen24,25
+saveURI saveURI27,28
+getURI getURI33,34
+linkShorty linkShorty38,39
+shortyCreated shortyCreated45,46
+shortyAintUri shortyAintUri52,53
+shortyFound shortyFound58,59
+app app67,68
+main main94,95
+
+./haskellbook/19/19.02-templating-content-in-scotty.hs,15
+main main5,6
+
+./haskellbook/17/17.08-list-applicative-exercise.hs,512
+data List List4,5
+data List a = NilNil4,5
+            | Cons Cons5,6
+instance Functor Functor List8,9
+  fmap fmap9,10
+instance Applicative Applicative List12,13
+  pure pure13,14
+  _ _14,15
+  Nil Nil15,16
+  Cons Cons16,17
+instance Arbitrary Arbitrary a => Arbitrary (List a)18,19
+  arbitrary arbitrary19,20
+instance Eq Eq a => EqProp (List a)23,24
+  (=(=-=)24,25
+listAp listAp26,27
+main main31,32
+append append37,38
+fold fold41,42
+concat' concat'45,46
+flatMap flatMap48,49
+
+./haskellbook/17/17.08-validations-on-either.hs,535
+data Validation Validation4,5
+data Validation err a = Failure Failure4,5
+                      | Success Success5,6
+instance Functor Functor (Validation e)8,9
+  fmap fmap9,10
+instance Monoid Monoid e => Applicative (Validation e)12,13
+  pure pure13,14
+  Success Success14,15
+  Failure Failure16,17
+instance (A(Arbitrary e, Arbitrary a) => Arbitrary (Validation e a)19,20
+  arbitrary arbitrary20,21
+instance (E(Eq e, Eq a) => EqProp (Validation e a)27,28
+  (=(=-=)28,29
+validAp validAp30,31
+main main33,34
+
+./haskellbook/17/17.08-ziplist-applicative-exercise.hs,791
+data List List4,5
+data List a = NilNil4,5
+            | Cons Cons5,6
+take' take'8,9
+instance Functor Functor List13,14
+  fmap fmap14,15
+instance Applicative Applicative List17,18
+  pure pure18,19
+  _ _19,20
+  Nil Nil20,21
+  Cons Cons21,22
+instance Arbitrary Arbitrary a => Arbitrary (List a)23,24
+  arbitrary arbitrary24,25
+instance Eq Eq a => EqProp (List a)28,29
+  (=(=-=)29,30
+append append31,32
+newtype ZipList' ZipList'35,36
+instance Eq Eq a => EqProp (ZipList' a)38,39
+  xs xs39,40
+instance Functor Functor ZipList'46,47
+  fmap fmap47,48
+instance Applicative Applicative ZipList'49,50
+  pure pure50,51
+  ZipList' ZipList'51,52
+instance Arbitrary Arbitrary a => Arbitrary (ZipList' a)55,56
+  arbitrary arbitrary56,57
+main main58,59
+
+./haskellbook/17/17.07-bad-monoid.hs,371
+module BadMonoid BadMonoid0,1
+data Bull Bull7,8
+data Bull = FoolsFools7,8
+          | TwooTwoo8,9
+instance Arbitrary Arbitrary Bull11,12
+  arbitrary arbitrary12,13
+instance Monoid Monoid Bull16,17
+  mempty mempty17,18
+  mappend mappend18,19
+instance EqProp EqProp Bull20,21
+  (=(=-=)21,22
+type SSI SSI23,24
+trigger trigger25,26
+main main28,29
+
+./haskellbook/17/17.05-lookups.hs,196
+added added9,10
+y y14,15
+z z17,18
+tupled tupled20,21
+x x25,26
+y' y'28,29
+max' max'31,32
+maxed maxed34,35
+xs xs39,40
+ys ys40,41
+x' x'42,43
+y'' y''45,46
+summed summed48,49
+
+./haskellbook/17/17.05-fixer-upper.hs,23
+f1 f15,6
+f2 f29,10
+
+./haskellbook/17/17.09-chapter-exercises-1.hs,124
+pure pure6,7
+(<(<*>)7,8
+pure pure12,13
+(<(<*>)13,14
+pure pure18,19
+(<(<*>)19,20
+pure pure24,25
+(<(<*>)25,26
+
+./haskellbook/17/17.09-chapter-exercises-2.hs,2558
+type SSI SSI5,6
+data Pair Pair9,10
+data Pair a = Pair Pair9,10
+instance Functor Functor Pair12,13
+  fmap fmap13,14
+instance Applicative Applicative Pair15,16
+  pure pure16,17
+  Pair Pair17,18
+instance Arbitrary Arbitrary a => Arbitrary (Pair a)19,20
+  arbitrary arbitrary20,21
+instance Eq Eq a => EqProp (Pair a)24,25
+  (=(=-=)25,26
+pair pair27,28
+data Two Two31,32
+data Two a b = Two Two31,32
+instance Functor Functor (Two a)34,35
+  fmap fmap35,36
+instance Monoid Monoid a => Applicative (Two a)37,38
+  pure pure38,39
+  Two Two39,40
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Two a b)41,42
+  arbitrary arbitrary42,43
+instance (E(Eq a, Eq b) => EqProp (Two a b)47,48
+  (=(=-=)48,49
+two two50,51
+data Three Three54,55
+data Three a b c = Three Three54,55
+instance Functor Functor (Three a b)57,58
+  fmap fmap58,59
+instance (M(Monoid a, Monoid b) => Applicative (Three a b)60,61
+  pure pure61,62
+  Three Three62,63
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c) => Arbitrary (Three a b c)64,65
+  arbitrary arbitrary68,69
+instance (E(Eq a, Eq b, Eq c) => EqProp (Three a b c)74,75
+  (=(=-=)75,76
+three three77,78
+data Three' Three'81,82
+data Three' a b = Three' Three'81,82
+instance Functor Functor (Three' a)84,85
+  fmap fmap85,86
+instance Monoid Monoid a => Applicative (Three' a)87,88
+  pure pure88,89
+  Three' Three'89,90
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Three' a b)91,92
+  arbitrary arbitrary92,93
+instance (E(Eq a, Eq b) => EqProp (Three' a b)97,98
+  (=(=-=)98,99
+three' three'100,101
+data Four Four104,105
+data Four a b c d = Four Four104,105
+instance Functor Functor (Four a b c)107,108
+  fmap fmap108,109
+instance (M(Monoid a, Monoid b, Monoid c) => Applicative (Four a b c)110,111
+  pure pure111,112
+  Four Four112,113
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c, Arbitrary d) => Arbitrary (Four a b c d)114,115
+  arbitrary arbitrary119,120
+instance (E(Eq a, Eq b, Eq c, Eq d) => EqProp (Four a b c d)126,127
+  (=(=-=)127,128
+four four129,130
+data Four' Four'133,134
+data Four' a b = Four' Four'133,134
+instance Functor Functor (Four' a)136,137
+  fmap fmap137,138
+instance Monoid Monoid a => Applicative (Four' a)139,140
+  pure pure140,141
+  Four' Four'141,142
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Four' a b)144,145
+  arbitrary arbitrary145,146
+instance (E(Eq a, Eq b) => EqProp (Four' a b)150,151
+  (=(=-=)151,152
+four' four'153,154
+main main156,157
+
+./haskellbook/17/17.09-chapter-exercises-3.hs,55
+stops stops2,3
+vowels vowels5,6
+combos combos8,9
+
+./haskellbook/17/17.08-apl1.hs,381
+module Apl1 Apl10,1
+instance Monoid Monoid a => Monoid (ZipList a)8,9
+  mempty mempty9,10
+  mappend mappend10,11
+instance Arbitrary Arbitrary a => Arbitrary (ZipList a)12,13
+  arbitrary arbitrary13,14
+instance Arbitrary Arbitrary a => Arbitrary (Sum a)15,16
+  arbitrary arbitrary16,17
+instance Eq Eq a => EqProp (ZipList a)18,19
+  (=(=-=)19,20
+main main21,22
+
+./haskellbook/17/17.05-constant-instance.hs,248
+newtype Constant Constant2,3
+                     { getConstant getConstant3,4
+instance Functor Functor (Constant a)6,7
+  fmap fmap7,8
+instance Monoid Monoid a => Applicative (Constant a)9,10
+  pure pure10,11
+  Constant Constant11,12
+
+./haskellbook/17/17.05-identity-instance.hs,181
+newtype Identity Identity3,4
+instance Functor Functor Identity6,7
+  fmap fmap7,8
+instance Applicative Applicative Identity9,10
+  pure pure10,11
+  Identity Identity11,12
+
+./haskellbook/07/07.06-employee-rank.hs,260
+data Employee Employee0,1
+data Employee = CoderCoder0,1
+              | ManagerManager1,2
+              | VeepVeep2,3
+              | CEOCEO3,4
+reportBoss reportBoss6,7
+codersRuleCEOsDrool codersRuleCEOsDrool9,10
+employeeRank employeeRank15,16
+
+./haskellbook/07/07.05-greet-if-cool-3.hs,67
+module GreetIfCool3 GreetIfCool30,1
+greetIfCool greetIfCool2,3
+
+./haskellbook/07/07.04-where-penguins-live.hs,726
+data WherePenguinsLive WherePenguinsLive0,1
+data WherePenguinsLive = GalapagosGalapagos0,1
+                       | AntarcticaAntarctica1,2
+                       | AustraliaAustralia2,3
+                       | SouthAfricaSouthAfrica3,4
+                       | SouthAmericaSouthAmerica4,5
+data Penguin Penguin7,8
+data Penguin = Peng Peng7,8
+isSouthAfrica isSouthAfrica10,11
+isSouthAfrica' isSouthAfrica'17,18
+gimmeWhereTheyLive gimmeWhereTheyLive21,22
+humboldt humboldt24,25
+gentoo gentoo25,26
+macaroni macaroni26,27
+little little27,28
+galapagos galapagos28,29
+galapagosPenguin galapagosPenguin30,31
+antarcticPenguin antarcticPenguin34,35
+antarcticOrGalapagos antarcticOrGalapagos38,39
+
+./haskellbook/07/07.05-case-practice.hs,69
+functionC functionC1,2
+ifEvenAdd2 ifEvenAdd28,9
+nums nums15,16
+
+./haskellbook/07/07.11-multiple-choice.hs,11
+f f32,33
+
+./haskellbook/07/07.06-artful-dodgy.hs,197
+dodgy dodgy1,2
+oneIsOne oneIsOne4,5
+oneIsTwo oneIsTwo7,8
+q2 q212,13
+q3 q320,21
+q4 q428,29
+q5 q536,37
+q6 q644,45
+q7 q752,53
+q8 q860,61
+q9 q968,69
+q10 q1076,77
+q11 q1184,85
+
+./haskellbook/07/07.04-variety-pack.hs,56
+k k2,3
+k1 k16,7
+k2 k29,10
+k3 k312,13
+f f21,22
+
+./haskellbook/07/07.07-guard-duty.hs,88
+avgGrade avgGrade1,2
+avgGrade' avgGrade'13,14
+pal pal27,28
+numbers numbers50,51
+
+./haskellbook/07/07.04-tuple-functions.hs,130
+module TupleFunctions TupleFunctions0,1
+addEmUp2 addEmUp22,3
+addEmUp2Alt addEmUp2Alt5,6
+fst3 fst38,9
+third3 third311,12
+
+./haskellbook/07/07.04-registered-user.hs,215
+newtype Username Username2,3
+newtype AccountNumber AccountNumber4,5
+data User User6,7
+data User = UnregisteredUserUnregisteredUser6,7
+          | RegisteredUser RegisteredUser7,8
+printUser printUser9,10
+
+./haskellbook/07/07.03-grab-bag.hs,73
+addOneIfOdd addOneIfOdd17,18
+addFive addFive24,25
+mflip mflip27,28
+
+./haskellbook/07/07.11-lets-write-code.hs,270
+module Arith4 Arith40,1
+tensDigit tensDigit4,5
+tensDigit' tensDigit'11,12
+hundsD hundsD22,23
+foldBool1 foldBool129,30
+foldBool2 foldBool235,36
+g g42,43
+roundTrip roundTrip47,48
+main main50,51
+roundTrip' roundTrip'61,62
+roundTrip'' roundTrip''66,67
+
+./haskellbook/05/chapter-exercises/type-kwan-do.hs,214
+f f1,2
+g g4,5
+h h7,8
+data AA11,12
+data BB12,13
+data CC13,14
+q q15,16
+w w18,19
+e e21,22
+data XX25,26
+data YY26,27
+data ZZ27,28
+xz xz29,30
+yz yz32,33
+xform xform35,36
+munge munge39,40
+
+./haskellbook/05/chapter-exercises/type-variable-or-constructor.hs,50
+f0 f06,7
+f1 f114,15
+f2 f221,22
+f3 f329,30
+
+./haskellbook/05/chapter-exercises/does-it-compile.hs,96
+bigNum bigNum1,2
+wahoo wahoo2,3
+x x5,6
+y y6,7
+z z7,8
+a a10,11
+b b11,12
+a a16,17
+
+./haskellbook/05/chapter-exercises/write-the-function.hs,93
+i i1,2
+c c5,6
+c'' c''9,10
+c' c'13,14
+r r17,18
+co co23,24
+a a27,28
+a' a'31,32
+
+./haskellbook/05/chapter-exercises/determine-the-type.hs,235
+module DetermineTheType DetermineTheType2,3
+54 547,8
+(0(0,"doge")11,12
+False False19,20
+5 523,24
+False False27,28
+x x30,31
+y y31,32
+w w32,33
+z z36,37
+f0 f040,41
+x' x'44,45
+y' y'45,46
+z' z'46,47
+f1 f147,48
+
+./haskellbook/05/chapter-exercises/fix-it.hs,106
+module Sing Sing0,1
+fstString fstString3,4
+sndString sndString6,7
+sing sing10,11
+main main18,19
+
+./haskellbook/05/chapter-exercises/multiple-choice.hs,0
+
+./haskellbook/05/chapter-exercises/write-a-type-signature.hs,76
+functionH functionH1,2
+functionC functionC5,6
+functionS functionS9,10
+
+./haskellbook/05/type-inference.hs,102
+myConcat myConcat1,2
+myMult myMult5,6
+myTake myTake9,10
+myCom myCom13,14
+myAlph myAlph17,18
+
+./haskellbook/05/type-arguments.hs,80
+f f1,2
+x x2,3
+g g7,8
+h h12,13
+jackal jackal21,22
+kessel kessel30,31
+
+./haskellbook/05/parametricity.hs,35
+f1 f11,2
+f2 f25,6
+f3 f311,12
+
+./haskellbook/05/type-matching.hs,121
+module TypeMatching TypeMatching0,1
+not not4,5
+length length8,9
+concat concat12,13
+head head16,17
+(<(<)20,21
+
+./haskellbook/21/21.06-morse-code-revisited.hs,205
+type Morse Morse4,5
+morse morse6,7
+stringToMorse stringToMorse9,10
+morseToLetter morseToLetter12,13
+charToMorse charToMorse15,16
+morseToChar morseToChar18,19
+letterToMorse letterToMorse21,22
+
+./haskellbook/21/21.09-tuple.hs,298
+instance Functor Functor ((,) a)0,1
+  fmap fmap1,2
+instance Monoid Monoid a => Applicative ((,) a)3,4
+  pure pure4,5
+  (u(u,f)5,6
+instance Foldable Foldable ((,) a)7,8
+  foldMap foldMap8,9
+  foldr foldr9,10
+instance Traversable Traversable ((,) a)11,12
+  traverse traverse12,13
+
+./haskellbook/21/21.12-instances-for-tree.hs,482
+data Tree Tree4,5
+data Tree a = EmptyEmpty4,5
+            | Leaf Leaf5,6
+            | Node Node6,7
+instance Functor Functor Tree9,10
+  fmap fmap10,11
+instance Foldable Foldable Tree14,15
+  foldMap foldMap15,16
+instance Traversable Traversable Tree19,20
+  traverse traverse20,21
+instance Arbitrary Arbitrary a => Arbitrary (Tree a)24,25
+  arbitrary arbitrary25,26
+instance Eq Eq a => EqProp (Tree a)31,32
+  (=(=-=)32,33
+tree tree34,35
+main main37,38
+
+./haskellbook/21/21.08-http-stuff.hs,111
+module HttpStuff HttpStuff0,1
+urls urls5,6
+mappingGet mappingGet10,11
+traversedUrls traversedUrls13,14
+
+./haskellbook/21/21.09-either.hs,426
+data Either Either0,1
+data Either a b = Left Left0,1
+                | Right Right1,2
+instance Functor Functor (Either a)4,5
+  fmap fmap5,6
+instance Applicative Applicative (Either e)8,9
+  pure pure9,10
+  Left Left10,11
+  Right Right11,12
+instance Foldable Foldable (Either a)13,14
+  foldMap foldMap14,15
+  foldr foldr17,18
+instance Traversable Traversable (Either a)20,21
+  traverse traverse21,22
+
+./haskellbook/21/21.12-ski-free.hs,556
+module SkiFree SkiFree2,3
+data S S8,9
+data S n a = S S8,9
+instance Functor Functor n => Functor (S n)11,12
+  fmap fmap12,13
+instance Foldable Foldable n => Foldable (S n)14,15
+  foldMap foldMap15,16
+instance Traversable Traversable n => Traversable (S n)17,18
+  traverse traverse18,19
+instance ( (Arbitrary (n a), CoArbitrary (n a), Arbitrary a, CoArbitrary a) => Arbitrary (S n a)20,21
+  arbitrary arbitrary25,26
+instance (E(Eq (n a), Eq a) => EqProp (S n a)30,31
+  (=(=-=)31,32
+sTraversable sTraversable33,34
+main main36,37
+
+./haskellbook/21/21.12-traversable-instances.hs,3993
+type IIIs IIIs4,5
+newtype Identity Identity9,10
+instance Functor Functor Identity12,13
+  fmap fmap13,14
+instance Foldable Foldable Identity15,16
+  foldr foldr16,17
+instance Traversable Traversable Identity18,19
+  traverse traverse19,20
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)21,22
+  arbitrary arbitrary22,23
+instance Eq Eq a => EqProp (Identity a)26,27
+  (=(=-=)27,28
+identityTraversable identityTraversable29,30
+newtype Constant Constant35,36
+                     { getConstant getConstant36,37
+instance Functor Functor (Constant a)39,40
+  fmap fmap40,41
+instance Foldable Foldable (Constant a)42,43
+  foldr foldr43,44
+instance Traversable Traversable (Constant a)45,46
+  traverse traverse46,47
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Constant a b)48,49
+  arbitrary arbitrary49,50
+instance (E(Eq a, Eq b) => EqProp (Constant a b)53,54
+  (=(=-=)54,55
+constantTraversable constantTraversable56,57
+data Optional Optional62,63
+data Optional a = NadaNada62,63
+                | Yep Yep63,64
+instance Functor Functor Optional66,67
+  fmap fmap67,68
+instance Foldable Foldable Optional70,71
+  foldMap foldMap71,72
+instance Traversable Traversable Optional74,75
+  traverse traverse75,76
+instance Arbitrary Arbitrary a => Arbitrary (Optional a)78,79
+  arbitrary arbitrary79,80
+instance Eq Eq a => EqProp (Optional a)85,86
+  (=(=-=)86,87
+maybeTraversable maybeTraversable88,89
+data List List93,94
+data List a = NilNil93,94
+            | Cons Cons94,95
+instance Functor Functor List97,98
+  fmap fmap98,99
+instance Foldable Foldable List101,102
+  foldMap foldMap102,103
+instance Traversable Traversable List105,106
+  traverse traverse106,107
+instance Arbitrary Arbitrary a => Arbitrary (List a)109,110
+  arbitrary arbitrary110,111
+instance Eq Eq a => EqProp (List a)114,115
+  (=(=-=)115,116
+listTraversable listTraversable117,118
+data Three Three122,123
+data Three a b c = Three Three122,123
+instance Functor Functor (Three a b)125,126
+  fmap fmap126,127
+instance Foldable Foldable (Three a b)128,129
+  foldMap foldMap129,130
+instance Traversable Traversable (Three a b)131,132
+  traverse traverse132,133
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c) => Arbitrary (Three a b c)134,135
+  arbitrary arbitrary138,139
+instance (E(Eq a, Eq b, Eq c) => EqProp (Three a b c)144,145
+  (=(=-=)145,146
+threeTraversable threeTraversable147,148
+data Pair Pair152,153
+data Pair a b = Pair Pair152,153
+instance Functor Functor (Pair a)155,156
+  fmap fmap156,157
+instance Foldable Foldable (Pair a)158,159
+  foldMap foldMap159,160
+instance Traversable Traversable (Pair a)161,162
+  traverse traverse162,163
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Pair a b)164,165
+  arbitrary arbitrary165,166
+instance (E(Eq a, Eq b) => EqProp (Pair a b)170,171
+  (=(=-=)171,172
+pairTraversable pairTraversable173,174
+data Big Big178,179
+data Big a b = Big Big178,179
+instance Functor Functor (Big a)181,182
+  fmap fmap182,183
+instance Foldable Foldable (Big a)184,185
+  foldMap foldMap185,186
+instance Traversable Traversable (Big a)187,188
+  traverse traverse188,189
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Big a b)190,191
+  arbitrary arbitrary191,192
+instance (E(Eq a, Eq b) => EqProp (Big a b)196,197
+  (=(=-=)197,198
+bigTraversable bigTraversable199,200
+data Bigger Bigger204,205
+data Bigger a b = Bigger Bigger204,205
+instance Functor Functor (Bigger a)207,208
+  fmap fmap208,209
+instance Foldable Foldable (Bigger a)210,211
+  foldMap foldMap211,212
+instance Traversable Traversable (Bigger a)213,214
+  traverse traverse214,215
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Bigger a b)216,217
+  arbitrary arbitrary217,218
+instance (E(Eq a, Eq b) => EqProp (Bigger a b)222,223
+  (=(=-=)223,224
+biggerTraversable biggerTraversable225,226
+main main230,231
+
+./haskellbook/21/21.07-axing-tedious-code.hs,344
+data Query Query0,1
+data Query     = QueryQuery0,1
+data SomeObj SomeObj1,2
+data SomeObj   = SomeObjSomeObj1,2
+data IoOnlyObj IoOnlyObj2,3
+data IoOnlyObj = IoOnlyObjIoOnlyObj2,3
+data Err Err3,4
+data Err       = ErrErr3,4
+decodeFn decodeFn5,6
+fetchFn fetchFn8,9
+makeIoOnlyObj makeIoOnlyObj11,12
+pipelineFn pipelineFn14,15
+
+./haskellbook/28/28.10-difference-list.hs,309
+newtype DList DList2,3
+newtype DList a = DL DL2,3
+newtype DList a = DL { unDL unDL2,3
+empty empty6,7
+singleton singleton12,13
+toList toList18,19
+infixr `cons`cons24,25
+infixl `snoc`snoc31,32
+append append38,39
+schlemiel schlemiel42,43
+constructDlist constructDlist48,49
+main main54,55
+
+./haskellbook/28/28.09-text.hs,125
+module Main Main0,1
+dictWords dictWords9,10
+dictWordsT dictWordsT12,13
+dictWordsTL dictWordsTL15,16
+main main18,19
+
+./haskellbook/28/28.07-sequence.hs,130
+module Main Main0,1
+lists lists5,6
+lists' lists'8,9
+seqs seqs11,12
+seqs' seqs'14,15
+main main17,18
+main' main'25,26
+
+./haskellbook/28/28.05-map.hs,108
+module Main Main0,1
+genList genList5,6
+pairList pairList11,12
+testMap testMap14,15
+main main18,19
+
+./haskellbook/28/28.04-constant-applicative-forms.hs,60
+module Main Main0,1
+incdInts incdInts2,3
+main main5,6
+
+./haskellbook/28/28.02-benchmarking-with-criterion/28.02-bench.hs,83
+module Main Main0,1
+(!(!?)6,7
+xs xs7,8
+myList myList16,17
+main main19,20
+
+./haskellbook/28/28.06-set.hs,136
+module Main Main0,1
+bumpIt bumpIt6,7
+m m8,9
+s s13,14
+membersMap membersMap18,19
+membersSet membersSet21,22
+main main24,25
+
+./haskellbook/28/28.10-a-simple-queue.hs,137
+data Queue Queue0,1
+data Queue a = QueueQueue0,1
+    { enqueue enqueue1,2
+    , dequeue dequeue2,3
+push push5,6
+pop pop10,11
+
+./haskellbook/28/28.06-benchmark-practice.hs,110
+bumpIt bumpIt4,5
+m m6,7
+s s11,12
+lookupMap lookupMap16,17
+lookupSet lookupSet19,20
+main main22,23
+
+./haskellbook/28/28.08-vector.hs,58
+module Main Main0,1
+v v6,7
+u u9,10
+main main12,13
+
+./haskellbook/14/14.07-using-quickcheck.hs,801
+half half5,6
+halfIdentity halfIdentity8,9
+prop_halfIdentity prop_halfIdentity11,12
+listOrdered listOrdered16,17
+prop_listOrdered prop_listOrdered23,24
+plusAssociative plusAssociative28,29
+plusCommutative plusCommutative31,32
+multAssociative multAssociative36,37
+multCommutative multCommutative39,40
+prop_quotRem prop_quotRem45,46
+prop_divMod prop_divMod48,49
+expoAssociative expoAssociative53,54
+expoCommutative expoCommutative56,57
+rereverse rereverse61,62
+orderedListGen orderedListGen64,65
+prop_reverseId prop_reverseId67,68
+prop_apply prop_apply72,73
+prop_compose prop_compose75,76
+prop_combineLists prop_combineLists80,81
+prop_combineLists' prop_combineLists'83,84
+prop_lengthTake prop_lengthTake89,90
+prop_showRead prop_showRead94,95
+main main97,98
+
+./haskellbook/14/14.03-addition/Addition.hs,394
+module Addition Addition0,1
+dividedBy dividedBy5,6
+mult mult12,13
+genBool genBool18,19
+genBool' genBool'21,22
+genOrdering genOrdering24,25
+genChar genChar27,28
+genTuple genTuple30,31
+genThreeple genThreeple36,37
+genEither genEither43,44
+genMaybe genMaybe51,52
+genMaybe' genMaybe'58,59
+prop_additionGreater prop_additionGreater65,66
+runQc runQc68,69
+main main71,72
+
+./haskellbook/14/14.07-failure.hs,79
+square square2,3
+prop_squareIdentity prop_squareIdentity4,5
+main main7,8
+
+./haskellbook/14/14.05-morse/src/Morse.hs,191
+type Morse Morse11,12
+morseToLetter morseToLetter13,14
+charToMorse charToMorse16,17
+stringToMorse stringToMorse19,20
+morseToChar morseToChar22,23
+letterToMorse letterToMorse25,26
+
+./haskellbook/14/14.05-morse/src/Main.hs,117
+module Main Main0,1
+convertToMorse convertToMorse10,11
+convertFromMorse convertFromMorse25,26
+main main41,42
+
+./haskellbook/14/14.05-morse/Setup.hs,15
+main main1,2
+
+./haskellbook/14/14.05-morse/tests/tests.hs,203
+module Main Main0,1
+allowedChars allowedChars6,7
+allowedMorse allowedMorse9,10
+charGen charGen12,13
+morseGen morseGen15,16
+prop_thereAndBackAgain prop_thereAndBackAgain18,19
+main main22,23
+
+./haskellbook/14/14.06-coarbitrary.hs,212
+module CoArbitrary CoArbitrary2,3
+data Bool' Bool'7,8
+data Bool' = True'True'7,8
+           | False'False'8,9
+instance CoArbitrary CoArbitrary Bool'11,12
+trueGen trueGen13,14
+falseGen falseGen16,17
+
+./haskellbook/14/14.07-idempotence.hs,180
+twice twice4,5
+fourTimes fourTimes6,7
+prop_idempotence prop_idempotence10,11
+capitalizeWord capitalizeWord16,17
+prop_idempotence' prop_idempotence'21,22
+main main27,28
+
+./haskellbook/14/14.07-gen-random-generator.hs,191
+data Fool Fool4,5
+data Fool = FulseFulse4,5
+          | FrueFrue5,6
+genEqualFoolDatatypes genEqualFoolDatatypes8,9
+genThirdFoolDatatypes genThirdFoolDatatypes13,14
+main main19,20
+
+./haskellbook/14/14.06-arbitrary-instances.hs,891
+module Main Main0,1
+data Trivial Trivial7,8
+data Trivial = TrivialTrivial7,8
+trivialGen trivialGen10,11
+instance Arbitrary Arbitrary Trivial13,14
+  arbitrary arbitrary14,15
+data Identity Identity18,19
+data Identity a = Identity Identity18,19
+identityGen identityGen21,22
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)26,27
+  arbitrary arbitrary27,28
+identityGenInt identityGenInt29,30
+data Pair Pair34,35
+data Pair a b = Pair Pair34,35
+pairGen pairGen37,38
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Pair a b)43,44
+  arbitrary arbitrary44,45
+pairGenIntString pairGenIntString46,47
+data Sum Sum51,52
+data Sum a b = First First51,52
+             | Second Second52,53
+sumGenEqual sumGenEqual55,56
+sumGenCharInt sumGenCharInt63,64
+sumGenFirstPls sumGenFirstPls66,67
+sumGenCharIntFirst sumGenCharIntFirst74,75
+main main79,80
+
+./haskellbook/14/14.07-word-number-test/src/WordNumber.hs,112
+module WordNumberWordNumber0,1
+digitToWord digitToWord8,9
+digits digits21,22
+wordNumber wordNumber26,27
+
+./haskellbook/14/14.07-word-number-test/Setup.hs,15
+main main1,2
+
+./haskellbook/14/14.07-word-number-test/test/WordNumberTest.hs,57
+module WordNumberTest WordNumberTest0,1
+main main5,6
+
+./haskellbook/10/10.06-database-processing.hs,327
+data DatabaseItem DatabaseItem2,3
+data DatabaseItem = DbString DbString2,3
+                  | DbNumber DbNumber3,4
+                  | DbDate DbDate4,5
+theDatabase theDatabase7,8
+filterDbDate filterDbDate18,19
+filterDbNumber filterDbNumber28,29
+mostRecent mostRecent37,38
+sumDb sumDb44,45
+avgDb avgDb49,50
+
+./haskellbook/10/10.10-warm-up-and-review.hs,243
+stops stops2,3
+vowels vowels5,6
+stopVowelStop stopVowelStop11,12
+stopVowelStopP stopVowelStopP17,18
+nouns nouns23,24
+verbs verbs30,31
+nounVerbNoun nounVerbNoun37,38
+seekritFunc seekritFunc42,43
+seekritFunc' seekritFunc'49,50
+
+./haskellbook/10/10.10-rewriting-functions-using-folds.hs,290
+myOr myOr4,5
+myAny myAny10,11
+myElem myElem16,17
+myElem' myElem'19,20
+myReverse myReverse24,25
+myMap myMap29,30
+myFilter myFilter34,35
+squish squish41,42
+squishMap squishMap46,47
+squishAgain squishAgain51,52
+myMaximumBy myMaximumBy58,59
+myMinimumBy myMinimumBy67,68
+
+./haskellbook/10/10.05-understanding-folds.hs,0
+
+./haskellbook/10/10.08-scans-exercises.hs,110
+fibs fibs2,3
+first20Fibs first20Fibs5,6
+lessThan100Fibs lessThan100Fibs10,11
+factorial factorial15,16
+
+./haskellbook/29/29.04-what-happens.hs,70
+module WhatHappens WhatHappens0,1
+myData myData4,5
+main main7,8
+
+./haskellbook/29/29.09-config-directories/src/Run.hs,109
+module Run Run0,1
+type Entry Entry8,9
+selectConfigs selectConfigs10,11
+readC readC13,14
+ls ls19,20
+
+./haskellbook/29/29.09-config-directories/src/Parser.hs,840
+module Parser Parser3,4
+headerEx headerEx15,16
+newtype Header Header18,19
+parseBracketPair parseBracketPair21,22
+parseHeader parseHeader24,25
+assignmentEx assignmentEx27,28
+type Name Name30,31
+type Value Value31,32
+type Assignments Assignments32,33
+parseAssignment parseAssignment34,35
+skipEOL skipEOL42,43
+commentEx commentEx45,46
+commentEx' commentEx'49,50
+skipComments skipComments52,53
+sectionEx sectionEx58,59
+sectionEx' sectionEx'61,62
+Chris=Chris65,66
+sectionEx'' sectionEx''68,69
+host=host72,73
+alias=alias73,74
+red=red76,77
+data Section Section79,80
+data Section = Section Section79,80
+newtype Config Config82,83
+skipWhitespace skipWhitespace85,86
+parseSection parseSection88,89
+rollup rollup97,98
+parseIni parseIni100,101
+maybeSuccess maybeSuccess106,107
+run run110,111
+
+./haskellbook/29/29.09-config-directories/Setup.hs,15
+main main1,2
+
+./haskellbook/29/29.09-config-directories/app/Main.hs,37
+module Main Main0,1
+main main5,6
+
+./haskellbook/29/29.09-file-io-with-vigenere/src/Cipher.hs,225
+module CipherCipher0,1
+charCodes charCodes7,8
+wrapLeft wrapLeft10,11
+wrapRight wrapRight15,16
+shiftChar shiftChar20,21
+unshiftChar unshiftChar23,24
+caesar caesar26,27
+uncaesar uncaesar30,31
+table table34,35
+
+./haskellbook/29/29.09-file-io-with-vigenere/src/Vigenere.hs,130
+module Vigenere Vigenere0,1
+readIn readIn8,9
+parseArgs parseArgs11,12
+finishWithError finishWithError15,16
+run run20,21
+
+./haskellbook/29/29.09-file-io-with-vigenere/Setup.hs,15
+main main1,2
+
+./haskellbook/29/29.09-file-io-with-vigenere/app/Main.hs,37
+module Main Main0,1
+main main4,5
+
+./haskellbook/04/practice.hs,131
+module Practice04 Practice040,1
+x x2,3
+oneMoreThanLength oneMoreThanLength4,5
+identity identity7,8
+getFirst getFirst9,10
+
+./haskellbook/25/25.06-bifunctor.hs,1081
+class Bifunctor Bifunctor0,1
+  bimap bimap2,3
+  first first5,6
+  second second8,9
+data Deux Deux13,14
+data Deux a b = Deux Deux13,14
+instance Bifunctor Bifunctor Deux16,17
+  bimap bimap17,18
+data Const Const21,22
+data Const a b = Const Const21,22
+instance Bifunctor Bifunctor Const24,25
+  bimap bimap25,26
+data Drei Drei29,30
+data Drei a b c = Drei Drei29,30
+instance Bifunctor Bifunctor (Drei a)32,33
+  bimap bimap33,34
+data SuperDrei SuperDrei37,38
+data SuperDrei a b c = SuperDrei SuperDrei37,38
+instance Bifunctor Bifunctor (SuperDrei a)40,41
+  bimap bimap41,42
+data SemiDrei SemiDrei45,46
+data SemiDrei a b c = SemiDrei SemiDrei45,46
+instance Bifunctor Bifunctor (SemiDrei a)48,49
+  bimap bimap49,50
+data Quadriceps Quadriceps53,54
+data Quadriceps a b c d = Quadzzz Quadzzz53,54
+instance Bifunctor Bifunctor (Quadriceps a b)56,57
+  bimap bimap57,58
+data Either' Either'61,62
+data Either' a b = Left' Left'61,62
+                 | Right' Right'62,63
+instance Bifunctor Bifunctor Either'65,66
+  bimap bimap66,67
+
+./haskellbook/25/25.08-identity-t.hs,384
+newtype IdentityT IdentityT2,3
+    { runIdentityT runIdentityT3,4
+instance Functor Functor m => Functor (IdentityT m)6,7
+  fmap fmap7,8
+instance Applicative Applicative m => Applicative (IdentityT m)9,10
+  pure pure10,11
+  IdentityT IdentityT11,12
+instance Monad Monad m => Monad (IdentityT m)13,14
+  return return14,15
+  (>(>>=)16,17
+  IdentityT IdentityT17,18
+
+./haskellbook/25/25.06-compose-instances.hs,463
+newtype Compose Compose2,3
+    { getCompose getCompose3,4
+instance (F(Functor f, Functor g) => Functor (Compose f g)6,7
+  fmap fmap7,8
+instance (A(Applicative f, Applicative g) => Applicative (Compose f g)9,10
+  pure pure10,11
+  Compose Compose11,12
+instance (F(Foldable f, Foldable g) => Foldable (Compose f g)15,16
+  foldMap foldMap16,17
+instance (T(Traversable f, Traversable g) => Traversable (Compose f g)20,21
+  traverse traverse21,22
+
+./haskellbook/25/25.04-twinplicative.hs,283
+newtype Compose Compose4,5
+    { getCompose getCompose5,6
+instance (F(Functor f, Functor g) => Functor (Compose f g)8,9
+  fmap fmap9,10
+instance (A(Applicative f, Applicative g) => Applicative (Compose f g)11,12
+  pure pure12,13
+  (<(<*>)15,16
+  Compose Compose16,17
+
+./haskellbook/20/20.05-library-functions.hs,218
+sum' sum'5,6
+product' product'10,11
+elem' elem'15,16
+minimum' minimum'22,23
+maximum' maximum'30,31
+null' null'38,39
+length' length'45,46
+toList' toList'52,53
+fold' fold'59,60
+foldMap' foldMap'64,65
+
+./haskellbook/20/20.04-demonstrating-foldable-instances.hs,386
+data Identity Identity7,8
+data Identity a = Identity Identity7,8
+instance Foldable Foldable Identity10,11
+  foldr foldr11,12
+  foldl foldl13,14
+  foldMap foldMap15,16
+data Optional Optional22,23
+data Optional a = NadaNada22,23
+                | Yep Yep23,24
+instance Foldable Foldable Optional26,27
+  foldr foldr27,28
+  foldl foldl30,31
+  foldMap foldMap33,34
+
+./haskellbook/20/20.06-chapter-exercises.hs,677
+data Constant Constant5,6
+data Constant a b = Constant Constant5,6
+instance Foldable Foldable (Constant a)8,9
+  foldMap foldMap9,10
+data Two Two13,14
+data Two a b = Two Two13,14
+instance Foldable Foldable (Two a)16,17
+  foldMap foldMap17,18
+data Three Three21,22
+data Three a b c = Three Three21,22
+instance Foldable Foldable (Three a b)24,25
+  foldMap foldMap25,26
+data Three' Three'29,30
+data Three' a b = Three' Three'29,30
+instance Foldable Foldable (Three' a)32,33
+  foldMap foldMap33,34
+data Four' Four'37,38
+data Four' a b = Four' Four'37,38
+instance Foldable Foldable (Four' a)40,41
+  foldMap foldMap41,42
+filterF filterF46,47
+
+./haskellbook/30/30.04-try-except.hs,134
+module TryExcept TryExcept0,1
+willIFail willIFail5,6
+onlyReportError onlyReportError8,9
+testDiv testDiv15,16
+main main18,19
+
+./haskellbook/30/30.02-why-some-exception.hs,435
+module WhySomeException WhySomeException3,4
+data MyException MyException8,9
+data MyException = forall forall8,9
+instance Show Show MyException10,11
+  showsPrec showsPrec11,12
+multiError multiError13,14
+data SomeError SomeError19,20
+data SomeError = Arith Arith19,20
+               | Async Async20,21
+               | SomethingElseSomethingElse21,22
+discriminateError discriminateError24,25
+runDisc runDisc33,34
+
+./haskellbook/30/30.07-our-exceptions.hs,239
+module OurExceptions OurExceptions0,1
+data EATD EATD4,5
+data EATD = NotEven NotEven4,5
+          | NotDivThree NotDivThree5,6
+instance Exception Exception EATD8,9
+evenAndThreeDiv evenAndThreeDiv10,11
+catchBoth catchBoth22,23
+
+./haskellbook/30/30.03-write-pls.hs,60
+module Main Main0,1
+handler handler5,6
+main main10,11
+
+./haskellbook/30/30.05-stopping-the-party.hs,100
+module StoppingTheParty StoppingTheParty0,1
+randomException randomException7,8
+main main14,15
+
+./haskellbook/08/08.06-fixing-divided-by.hs,156
+data DividedResult DividedResult0,1
+data DividedResult = Result Result0,1
+                   | DividedByZeroDividedByZero1,2
+dividedBy dividedBy4,5
+
+./haskellbook/08/08.06-reviewing-currying.hs,269
+cattyConny cattyConny0,1
+flippy flippy3,4
+appedCatty appedCatty6,7
+frappe frappe9,10
+appedCatty' appedCatty'14,15
+frappe' frappe'19,20
+frappe'' frappe''24,25
+appedCatty'' appedCatty''29,30
+cattyConny' cattyConny'34,35
+cattyConny'' cattyConny''40,41
+
+./haskellbook/08/08.06-review-of-types.hs,17
+func func17,18
+
+./haskellbook/08/08.06-recursion.hs,63
+dividedBy dividedBy1,2
+sumToN sumToN25,26
+mult mult33,34
+
+./haskellbook/08/08.06-mccarthy-91-function.hs,15
+mc91 mc910,1
+
+./haskellbook/08/08.02-exercise.hs,51
+applyTimes applyTimes0,1
+at at4,5
+at' at'7,8
+
+./haskellbook/08/08.06-word-number.hs,113
+module WordNumber WordNumber0,1
+digitToWord digitToWord4,5
+digits digits17,18
+wordNumber wordNumber23,24
+
+./haskellbook/11/11.14-the-quad.hs,250
+data Quad Quad1,2
+data Quad = OneOne1,2
+          | TwoTwo2,3
+          | ThreeThree3,4
+          | FourFour4,5
+eQuad eQuad8,9
+prodQuad prodQuad17,18
+funcQuad funcQuad26,27
+prodTBool prodTBool35,36
+gTwo gTwo44,45
+fTwo fTwo52,53
+
+./haskellbook/11/11.10-pity-the-bool.hs,180
+data BigSmall BigSmall4,5
+    Big Big5,6
+  | Small Small6,7
+data NumberOrBool NumberOrBool14,15
+    Numba Numba15,16
+  | BoolyBool BoolyBool16,17
+n n19,20
+x x20,21
+
+./haskellbook/11/11.17-binary-tree.hs,468
+data BinaryTree BinaryTree5,6
+data BinaryTree a = LeafLeaf5,6
+                  | Node Node6,7
+insert' insert'9,10
+mapTree mapTree16,17
+testTree' testTree'20,21
+mapExpected mapExpected23,24
+mapOkay mapOkay25,26
+preorder preorder33,34
+inorder inorder37,38
+postorder postorder41,42
+testTree testTree45,46
+testPreorder testPreorder48,49
+testInorder testInorder53,54
+testPostorder testPostorder58,59
+main main63,64
+foldTree foldTree74,75
+
+./haskellbook/11/11.08-cardinality.hs,202
+data PugType PugType2,3
+data PugType = PugDataPugData2,3
+data Airline Airline7,8
+    PapuAirPapuAir8,9
+  | CatapultsR'UsCatapultsR'Us9,10
+  | TakeYourChancesUnitedTakeYourChancesUnited10,11
+
+./haskellbook/11/11.18-as-patterns.hs,66
+isSubseqOf isSubseqOf5,6
+capitalizeWords capitalizeWords15,16
+
+./haskellbook/11/11.06-vehicles.hs,605
+data Price Price0,1
+data Price = Price Price0,1
+data Manufacturer Manufacturer2,3
+    MiniMini3,4
+  | MazdaMazda4,5
+  | TataTata5,6
+data Airline Airline8,9
+    PapuAirPapuAir9,10
+  | CatapultsR'UsCatapultsR'Us10,11
+  | TakeYourChancesUnitedTakeYourChancesUnited11,12
+data Vehicle Vehicle14,15
+    Car Car15,16
+  | Plane Plane16,17
+data Size Size20,21
+    SS21,22
+  | MM22,23
+  | LL23,24
+  | XLXL24,25
+myCar myCar27,28
+urCar urCar28,29
+clownCar clownCar29,30
+doge doge30,31
+isCar isCar38,39
+isPlane isPlane42,43
+areCars areCars46,47
+getManu getManu51,52
+
+./haskellbook/11/11.09-logic-goats.hs,606
+class TooMany TooMany2,3
+  tooMany tooMany3,4
+instance TooMany TooMany Int5,6
+  tooMany tooMany6,7
+newtype Goats Goats8,9
+newtype Cows Cows9,10
+tooManyGoats tooManyGoats11,12
+data IntString IntString17,18
+data IntString = IntString IntString17,18
+instance TooMany TooMany IntString19,20
+  tooMany tooMany20,21
+data IntInt IntInt25,26
+data IntInt = IntInt IntInt25,26
+instance TooMany TooMany IntInt27,28
+  tooMany tooMany28,29
+data NumTooMany NumTooMany32,33
+data NumTooMany = NumTooMany NumTooMany32,33
+instance TooMany TooMany NumTooMany34,35
+  tooMany tooMany35,36
+
+./haskellbook/11/11.08-for-example.hs,149
+data Example Example3,4
+data Example = MakeExample MakeExample3,4
+data Example' Example'15,16
+data Example' = MakeExample' MakeExample'15,16
+
+./haskellbook/11/11.18-phone-exercise.hs,973
+keypadDigits keypadDigits22,23
+keypadChars keypadChars28,29
+type Digit Digit36,37
+type Presses Presses37,38
+data DaPhone DaPhone39,40
+data DaPhone = DaPhone DaPhone39,40
+digits digits42,43
+chars chars45,46
+allChars allChars48,49
+alphaNumChars alphaNumChars51,52
+phone phone54,55
+convo convo72,73
+charCase charCase84,85
+charAtKey charAtKey89,90
+locateKey locateKey92,93
+pressesTillMatch pressesTillMatch95,96
+charToPresses charToPresses98,99
+charPresses charPresses102,103
+accumulateCharPresses accumulateCharPresses105,106
+pressesPerMessage pressesPerMessage108,109
+pressesPerConvo pressesPerConvo111,112
+listOfCharPresses listOfCharPresses119,120
+mostPopularLetter mostPopularLetter124,125
+mostPopularOccurence mostPopularOccurence127,128
+occurencesByChar occurencesByChar130,131
+maxFromPair maxFromPair133,134
+coolestLtr coolestLtr139,140
+popularOccurences popularOccurences142,143
+coolestWord coolestWord145,146
+
+./haskellbook/11/11.18-multiple-choice.hs,225
+data Weekday Weekday1,2
+data Weekday = MondayMonday1,2
+             | TuesdayTuesday2,3
+             | WednesdayWednesday3,4
+             | ThursdayThursday4,5
+             | FridayFriday5,6
+f f11,12
+g g21,22
+
+./haskellbook/11/11.18-huttons-razor.hs,112
+data Expr Expr2,3
+data Expr = Lit Lit2,3
+          | Add Add3,4
+eval eval6,7
+printExpr printExpr12,13
+
+./haskellbook/11/11.13-sum-and-product.hs,1564
+data GuessWhat GuessWhat0,1
+data GuessWhat = ChickenbuttChickenbutt0,1
+data Id Id3,4
+data Id a = MkId MkId3,4
+data Product Product6,7
+data Product a b = Product Product6,7
+data Sum Sum9,10
+data Sum a b = First First9,10
+             | Second Second10,11
+data RecordProduct RecordProduct13,14
+data RecordProduct a b = RecordProductRecordProduct13,14
+    { pfirst pfirst14,15
+    , psecond psecond15,16
+data NumCow NumCow17,18
+data NumCow = NumCow NumCow17,18
+data NumPig NumPig20,21
+data NumPig = NumPig NumPig20,21
+data Farmhouse Farmhouse23,24
+data Farmhouse = Farmhouse Farmhouse23,24
+type Farmhouse' Farmhouse'26,27
+newtype NumSheep NumSheep28,29
+data BigFarmhouse BigFarmhouse31,32
+data BigFarmhouse = BigFarmhouse BigFarmhouse31,32
+type BigFarmhouse' BigFarmhouse'34,35
+type Name Name35,36
+type Age Age36,37
+type LovesMud LovesMud37,38
+type PoundsOfWool PoundsOfWool38,39
+data CowInfo CowInfo40,41
+data CowInfo = CowInfo CowInfo40,41
+data PigInfo PigInfo43,44
+data PigInfo = PigInfo PigInfo43,44
+data SheepInfo SheepInfo46,47
+data SheepInfo = SheepInfo SheepInfo46,47
+data Animal Animal49,50
+data Animal = Cow Cow49,50
+            | Pig Pig50,51
+            | Sheep Sheep51,52
+type Animal' Animal'54,55
+trivialValue trivialValue61,62
+idInt idInt64,65
+idIdentity idIdentity67,68
+type Awesome Awesome70,71
+person person72,73
+type Twitter Twitter88,89
+type AskFm AskFm89,90
+twitter twitter91,92
+askFm askFm94,95
+myRecord myRecord97,98
+myRecord' myRecord'100,101
+
+./haskellbook/11/11.12-how-does-your-garden-grow.hs,263
+data FlowerType FlowerType2,3
+    GardeniaGardenia3,4
+  | DaisyDaisy4,5
+  | RoseRose5,6
+  | LilacLilac6,7
+type Gardener Gardener9,10
+data Garden Garden11,12
+data Garden = Garden Garden11,12
+data Garden' Garden'13,14
+    Gardener Gardener14,15
+
+./haskellbook/11/11.18-language-exercises.hs,162
+capitalizeWord capitalizeWord6,7
+capitalizeParagraph capitalizeParagraph13,14
+splitAndCapitalize splitAndCapitalize17,18
+joinAndConcat joinAndConcat20,21
+
+./haskellbook/11/11.13-programmers.hs,1570
+data OperatingSystem OperatingSystem1,2
+data OperatingSystem = GnuPlusLinuxGnuPlusLinux1,2
+                     | OpenBSDPlusNevermindJustBSDStillOpenBSDPlusNevermindJustBSDStill2,3
+                     | MacMac3,4
+                     | WindowsWindows4,5
+data ProgrammingLanguage ProgrammingLanguage7,8
+data ProgrammingLanguage = HaskellHaskell7,8
+                         | AgdaAgda8,9
+                         | IdrisIdris9,10
+                         | PureScriptPureScript10,11
+data Programmer Programmer13,14
+data Programmer = ProgrammerProgrammer13,14
+    { os os14,15
+    , lang lang15,16
+nineToFive nineToFive18,19
+feelingWizardly feelingWizardly22,23
+allOperatingSystems allOperatingSystems26,27
+allLanguages allLanguages34,35
+allProgrammers allProgrammers42,43
+newtype Name Name51,52
+newtype Acres Acres54,55
+data FarmerType FarmerType57,58
+data FarmerType = DairyFarmerDairyFarmer57,58
+                | WheatFarmerWheatFarmer58,59
+                | SoybeanFarmerSoybeanFarmer59,60
+data Farmer Farmer62,63
+data Farmer = Farmer Farmer62,63
+isDairyFarmer isDairyFarmer65,66
+data FarmerRec FarmerRec69,70
+data FarmerRec = FarmerRecFarmerRec69,70
+    { name name70,71
+    , acres acres71,72
+    , farmerType farmerType72,73
+isDairyFarmerRec isDairyFarmerRec75,76
+data Car Car85,86
+data Car = CarCar85,86
+    { make make86,87
+    , model model87,88
+    , year year88,89
+data Automobile Automobile91,92
+data Automobile = NullNull91,92
+                | Automobile Automobile92,93
+
+./haskellbook/11/11.18-ciphers.hs,198
+charCodes charCodes2,3
+wrapLeft wrapLeft5,6
+wrapRight wrapRight10,11
+shiftChar shiftChar15,16
+unshiftChar unshiftChar18,19
+caesar caesar21,22
+uncaesar uncaesar25,26
+table table29,30
+
+./haskellbook/06/06.14-type-kwon-do-two.hs,30
+chk chk0,1
+arith arith3,4
+
+./haskellbook/06/06.14-does-it-typecheck.hs,502
+data Person Person1,2
+data Person = Person Person1,2
+instance Show Show Person3,4
+  show show4,5
+printPerson printPerson6,7
+data Mood Mood11,12
+data Mood = BlahBlah11,12
+          | WootWoot12,13
+instance Eq Eq Mood15,16
+  (=(==)16,17
+settleDown settleDown20,21
+type Subject Subject40,41
+type Verb Verb41,42
+type Object Object42,43
+data Sentence Sentence44,45
+data Sentence = Sentence Sentence44,45
+              | Incomplete Incomplete45,46
+s1 s148,49
+s2 s251,52
+
+./haskellbook/06/06.14-multiple-choice.hs,0
+
+./haskellbook/06/06.14-what-can-we-do.hs,183
+data Rocks Rocks0,1
+data Rocks = Rocks Rocks0,1
+data Yeah Yeah3,4
+data Yeah = Yeah Yeah3,4
+data Papu Papu6,7
+data Papu = Papu Papu6,7
+equalityForall equalityForall24,25
+
+./haskellbook/06/06.05-day-of-week.hs,373
+data DayOfWeek DayOfWeek0,1
+data DayOfWeek = MonMon0,1
+               | TueTue1,2
+               | WedWed2,3
+               | ThuThu3,4
+               | FriFri4,5
+               | SatSat5,6
+               | SunSun6,7
+data Date Date9,10
+data Date = Date Date9,10
+instance Eq Eq DayOfWeek12,13
+  (=(==)13,14
+instance Eq Eq Date22,23
+  (=(==)23,24
+
+./haskellbook/06/06.08-will-they-work.hs,0
+
+./haskellbook/06/06.12-numberish.hs,467
+class Numberish Numberish0,1
+  fromNumber fromNumber1,2
+  toNumber toNumber2,3
+  defaultNumber defaultNumber3,4
+newtype Age Age5,6
+instance Numberish Numberish Age8,9
+  fromNumber fromNumber9,10
+  toNumber toNumber10,11
+  defaultNumber defaultNumber11,12
+newtype Year Year13,14
+instance Numberish Numberish Year16,17
+  fromNumber fromNumber17,18
+  toNumber toNumber18,19
+  defaultNumber defaultNumber19,20
+sumNumberish sumNumberish21,22
+
+./haskellbook/06/06.14-match-the-types.hs,258
+i i4,5
+f f16,17
+f' f'27,28
+f'' f''38,39
+freud freud49,50
+freud' freud'60,61
+myX myX71,72
+sigmund sigmund74,75
+myX' myX'84,85
+sigmund' sigmund'86,87
+jung jung97,98
+young young108,109
+mySort mySort119,120
+signifier signifier123,124
+
+./haskellbook/06/06.05-eq-instances.hs,985
+data TisAnInteger TisAnInteger1,2
+data TisAnInteger = TisAn TisAn1,2
+instance Eq Eq TisAnInteger4,5
+  (=(==)5,6
+data TwoIntegers TwoIntegers9,10
+data TwoIntegers = Two Two9,10
+instance Eq Eq TwoIntegers12,13
+  (=(==)13,14
+data StringOrInt StringOrInt17,18
+data StringOrInt = TisAnInt TisAnInt17,18
+                 | TisAString TisAString18,19
+instance Eq Eq StringOrInt21,22
+  (=(==)22,23
+data Pair Pair28,29
+data Pair a = Pair Pair28,29
+instance Eq Eq a => Eq (Pair a)31,32
+  (=(==)32,33
+data Tuple Tuple36,37
+data Tuple a b = Tuple Tuple36,37
+instance (E(Eq a, Eq b) => Eq (Tuple a b)39,40
+  (=(==)40,41
+data Which Which44,45
+data Which a = ThisOne ThisOne44,45
+             | ThatOne ThatOne45,46
+instance Eq Eq a => Eq (Which a)48,49
+  (=(==)49,50
+data EitherOr EitherOr55,56
+data EitherOr a b = Hello Hello55,56
+                  | Goodbye Goodbye56,57
+instance (E(Eq a, Eq b) => Eq (EitherOr a b)59,60
+  (=(==)60,61
+
+./haskellbook/22/22.08-pretty-reader.hs,555
+module PrettyReader PrettyReader2,3
+flip flip4,5
+const const7,8
+(.(.)10,11
+f f11,12
+class Functor Functor13,14
+  fmap fmap14,15
+class Functor f => Applicative Applicative16,17
+  pure pure17,18
+  (<(<*>)18,19
+class Applicative f => Monad Monad20,21
+  return return21,22
+  (>(>>=)22,23
+instance Functor Functor ((->) r)24,25
+  fmap fmap25,26
+instance Applicative Applicative ((->) r)27,28
+  pure pure28,29
+  f f30,31
+instance Monad Monad ((->) r)32,33
+  return return33,34
+  m m34,35
+withReaderT withReaderT36,37
+
+./haskellbook/22/22.11-shawty-prime/Setup.hs,15
+main main1,2
+
+./haskellbook/22/22.11-shawty-prime/app/Main.hs,357
+module Main Main2,3
+alphaNum alphaNum15,16
+randomElement randomElement18,19
+shortyGen shortyGen25,26
+saveURI saveURI28,29
+getURI getURI34,35
+linkShorty linkShorty39,40
+shortyCreated shortyCreated46,47
+shortyAintUri shortyAintUri53,54
+shortyFound shortyFound59,60
+app app68,69
+runApp runApp94,95
+rConn rConn97,98
+main main102,103
+
+./haskellbook/22/22.02-a-new-beginning.hs,189
+module Web.Shipping.Utils Web.Shipping.Utils0,1
+boop boop4,5
+doop doop5,6
+bip bip7,8
+bloop bloop10,11
+bbop bbop13,14
+duwop duwop16,17
+(<(<||>)19,20
+boopDoop boopDoop22,23
+
+./haskellbook/22/22.07-reader-monad.hs,789
+newtype Reader Reader2,3
+                   { runReader runReader3,4
+instance Functor Functor (Reader r)5,6
+  fmap fmap6,7
+instance Applicative Applicative (Reader r)8,9
+  pure pure9,10
+  (<(<*>)12,13
+  (R(Readerrab)13,14
+instance Monad Monad (Reader r)17,18
+  return return18,19
+  (>(>>=)20,21
+  Reader Reader21,22
+newtype HumanName HumanName25,26
+newtype DogName DogName28,29
+newtype Address Address31,32
+data Person Person34,35
+data Person = PersonPerson34,35
+    { humanName humanName35,36
+    , dogName dogName36,37
+    , address address37,38
+data Dog Dog40,41
+data Dog = DogDog40,41
+    { dogsName dogsName41,42
+    , dogsAddress dogsAddress42,43
+pers pers45,46
+chris chris50,51
+getDogRM getDogRM55,56
+getDogRM' getDogRM'61,62
+
+./haskellbook/22/22.11-reader-practice.hs,334
+module ReaderPractice ReaderPractice0,1
+x x5,6
+y y8,9
+z z11,12
+xs xs14,15
+ys ys17,18
+zs zs20,21
+z' z'23,24
+x1 x126,27
+x2 x229,30
+x3 x332,33
+summed summed35,36
+bolt bolt38,39
+sequA sequA41,42
+s' s'44,45
+sequenceAll sequenceAll49,50
+sequenceSum sequenceSum54,55
+liftAll liftAll59,60
+main main63,64
+
+./haskellbook/22/22.06-demonstrating-the-function-applicative.hs,521
+newtype HumanName HumanName2,3
+newtype DogName DogName5,6
+newtype Address Address8,9
+data Person Person11,12
+data Person = PersonPerson11,12
+    { humanName humanName12,13
+    , dogName dogName13,14
+    , address address14,15
+data Dog Dog17,18
+data Dog = DogDog17,18
+    { dogsName dogsName18,19
+    , dogsAddress dogsAddress19,20
+pers pers22,23
+chris chris27,28
+getDog getDog32,33
+getDogR getDogR35,36
+(<(<$->>)38,39
+(<(<*->>)41,42
+getDogR' getDogR'44,45
+getDogR'' getDogR''47,48
+
+./haskellbook/22/22.05-ask.hs,86
+newtype Reader Reader0,1
+                   { runReader runReader1,2
+ask ask3,4
+
+./haskellbook/22/22.02-warming-up.hs,116
+cap cap2,3
+rev rev5,6
+composed composed8,9
+fmapped fmapped11,12
+tupled tupled14,15
+tupled' tupled'20,21
+
+./haskellbook/22/22.06-reading-comprehension.hs,285
+newtype Reader Reader2,3
+                   { runReader runReader3,4
+myLiftA2 myLiftA27,8
+asks asks12,13
+instance Functor Functor (Reader r)17,18
+  fmap fmap18,19
+instance Applicative Applicative (Reader r)20,21
+  pure pure21,22
+  (<(<*>)24,25
+  (R(Readerrab)25,26
+
+./haskellbook/02/chapter-exercises.hs,61
+waxOn waxOn14,15
+triple triple19,20
+waxOff waxOff21,22
+
+./haskellbook/02/practice.hs,66
+mult1 mult10,1
+one one15,16
+two two19,20
+three three23,24
+
+./haskellbook/02/test.hs,23
+sayHello sayHello0,1
+
+./haskellbook/23/23.07-fizzbuzz-differently.hs,166
+fizzBuzz fizzBuzz4,5
+fizzBuzz n | n `mod`mod5,6
+fizzbuzzList fizzbuzzList10,11
+addResult addResult13,14
+fizzbuzzFromTo fizzbuzzFromTo19,20
+main main24,25
+
+./haskellbook/23/23.08-chapter-exercises.hs,135
+newtype State State0,1
+  { runState runState1,2
+get get5,6
+put put10,11
+exec exec15,16
+eval eval20,21
+modify modify25,26
+
+./haskellbook/23/23.05-random-example-2.hs,503
+module RandomExample2 RandomExample20,1
+data Die Die7,8
+data Die = DieOneDieOne7,8
+         | DieTwoDieTwo8,9
+         | DieThreeDieThree9,10
+         | DieFourDieFour10,11
+         | DieFiveDieFive11,12
+         | DieSixDieSix12,13
+intToDie intToDie15,16
+rollDieThreeTimes rollDieThreeTimes25,26
+rollDie rollDie33,34
+rollToDie' rollToDie'38,39
+rollDieThreeTimes' rollDieThreeTimes'41,42
+infiniteDie infiniteDie44,45
+nDie nDie47,48
+rollsToGetTwenty rollsToGetTwenty50,51
+
+./haskellbook/23/23.05-roll-your-own.hs,340
+module RandomExample2 RandomExample20,1
+data Die Die4,5
+data Die = DieOneDieOne4,5
+         | DieTwoDieTwo5,6
+         | DieThreeDieThree6,7
+         | DieFourDieFour7,8
+         | DieFiveDieFive8,9
+         | DieSixDieSix9,10
+intToDie intToDie12,13
+rollsToGetN rollsToGetN24,25
+rollsCountLogged rollsCountLogged35,36
+
+./haskellbook/23/23.06-write-state-for-yourself.hs,258
+newtype Moi Moi0,1
+    { runMoi runMoi1,2
+instance Functor Functor (Moi s)3,4
+  fmap fmap4,5
+instance Applicative Applicative (Moi s)8,9
+  pure pure9,10
+  Moi Moi11,12
+instance Monad Monad (Moi s)17,18
+  return return18,19
+  Moi Moi20,21
+
+./haskellbook/23/23.05-random-example.hs,309
+module RandomExample RandomExample0,1
+data Die Die4,5
+data Die = DieOneDieOne4,5
+         | DieTwoDieTwo5,6
+         | DieThreeDieThree6,7
+         | DieFourDieFour7,8
+         | DieFiveDieFive8,9
+         | DieSixDieSix9,10
+intToDie intToDie12,13
+rollDieThreeTimes rollDieThreeTimes22,23
+
+./haskellbook/16/16.10-instances-of-func.hs,2192
+functorIdentity functorIdentity5,6
+functorCompose functorCompose8,9
+functorCompose' functorCompose'15,16
+type IntToInt IntToInt23,24
+type IntFC IntFC24,25
+newtype Identity Identity28,29
+instance Functor Functor Identity31,32
+  fmap fmap32,33
+instance Arbitrary Arbitrary a => Arbitrary (Identity a)34,35
+  arbitrary arbitrary35,36
+type IdId IdId39,40
+type IdFC IdFC40,41
+data Pair Pair44,45
+data Pair a = Pair Pair44,45
+instance Functor Functor Pair47,48
+  fmap fmap48,49
+instance Arbitrary Arbitrary a => Arbitrary (Pair a)50,51
+  arbitrary arbitrary51,52
+type PairId PairId55,56
+type PairFC PairFC56,57
+data Two Two60,61
+data Two a b = Two Two60,61
+instance Functor Functor (Two a)63,64
+  fmap fmap64,65
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Two a b)66,67
+  arbitrary arbitrary67,68
+type TwoId TwoId72,73
+type TwoFC TwoFC73,74
+data Three Three77,78
+data Three a b c = Three Three77,78
+instance Functor Functor (Three a b)80,81
+  fmap fmap81,82
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c) => Arbitrary (Three a b c)83,84
+  arbitrary arbitrary87,88
+type ThreeId ThreeId93,94
+type ThreeFC ThreeFC94,95
+data Three' Three'98,99
+data Three' a b = Three' Three'98,99
+instance Functor Functor (Three' a)101,102
+  fmap fmap102,103
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Three' a b)104,105
+  arbitrary arbitrary105,106
+type Three'Id Three'Id110,111
+type Three'FC Three'FC111,112
+data Four Four116,117
+data Four a b c d = Four Four116,117
+instance Functor Functor (Four a b c)119,120
+  fmap fmap120,121
+instance ( (Arbitrary a, Arbitrary b, Arbitrary c, Arbitrary d) => Arbitrary (Four a b c d)122,123
+  arbitrary arbitrary127,128
+type FourId FourId134,135
+type FourFC FourFC135,136
+data Four' Four'139,140
+data Four' a b = Four' Four'139,140
+instance Functor Functor (Four' a)142,143
+  fmap fmap143,144
+instance (A(Arbitrary a, Arbitrary b) => Arbitrary (Four' a b)145,146
+  arbitrary arbitrary146,147
+type Four'Id Four'Id151,152
+type Four'FC Four'FC152,153
+data Trivial Trivial157,158
+data Trivial = TrivialTrivial157,158
+main main165,166
+
+./haskellbook/16/16.07-heavy-lifting.hs,51
+a a2,3
+b b6,7
+c c10,11
+d d14,15
+e e18,19
+
+./haskellbook/16/16.17-chapter-exercises-1.hs,1080
+functorIdentity functorIdentity5,6
+functorCompose functorCompose8,9
+type IntToInt IntToInt16,17
+data BoolAndSomethingElse BoolAndSomethingElse30,31
+data BoolAndSomethingElse a = False' False'30,31
+                            | True' True'31,32
+instance Functor Functor BoolAndSomethingElse34,35
+  fmap fmap35,36
+instance Arbitrary Arbitrary a => Arbitrary (BoolAndSomethingElse a)38,39
+  arbitrary arbitrary39,40
+type BoolEtcId BoolEtcId45,46
+type BoolEtcFC BoolEtcFC46,47
+data BoolAndMaybeSomethingElse BoolAndMaybeSomethingElse50,51
+data BoolAndMaybeSomethingElse a = FalsishFalsish50,51
+                                 | Truish Truish51,52
+instance Functor Functor BoolAndMaybeSomethingElse54,55
+  fmap fmap55,56
+instance Arbitrary Arbitrary a => Arbitrary (BoolAndMaybeSomethingElse a)58,59
+  arbitrary arbitrary59,60
+type BoolMaybeEtcId BoolMaybeEtcId65,66
+type BoolMaybeEtcFC BoolMaybeEtcFC66,67
+newtype Mu Mu74,75
+newtype Mu f = InFInF74,75
+             { outF outF75,76
+data D D83,84
+data D = D D83,84
+main main90,91
+
+./haskellbook/16/16.11-possibly.hs,360
+incIfJust incIfJust0,1
+showIfJust showIfJust4,5
+incMaybe incMaybe8,9
+showMaybe showMaybe11,12
+liftedInc liftedInc14,15
+liftedShow liftedShow17,18
+data Possibly Possibly21,22
+data Possibly a = LolNopeLolNope21,22
+                | Yeppers Yeppers22,23
+instance Functor Functor Possibly25,26
+  fmap fmap26,27
+runPossibly runPossibly29,30
+
+./haskellbook/16/16.07-replace-experiment.hs,348
+module ReplaceExperiment ReplaceExperiment0,1
+replaceWithP replaceWithP2,3
+lms lms5,6
+replaceWithP' replaceWithP'11,12
+liftedReplace liftedReplace14,15
+liftedReplace' liftedReplace'17,18
+twiceLifted twiceLifted20,21
+twiceLifted' twiceLifted'23,24
+thriceLifted thriceLifted26,27
+thriceLifted' thriceLifted'32,33
+main main35,36
+
+./haskellbook/16/16.04-be-kind.hs,0
+
+./haskellbook/16/16.17-chapter-exercises-3.hs,1755
+data Quant Quant6,7
+data Quant a b = FinanceFinance6,7
+               | Desk Desk7,8
+               | Bloor Bloor8,9
+instance Functor Functor (Quant a)10,11
+  fmap fmap11,12
+data K K17,18
+data K a b = K K17,18
+instance Functor Functor (K a)19,20
+  fmap fmap20,21
+newtype Flip Flip24,25
+instance Functor Functor (Flip K a)27,28
+  fmap fmap28,29
+data EvilGoateeConst EvilGoateeConst32,33
+data EvilGoateeConst a b = GoatyConst GoatyConst32,33
+instance Functor Functor (EvilGoateeConst a)34,35
+  fmap fmap35,36
+data LiftItOut LiftItOut39,40
+data LiftItOut f a = LiftItOut LiftItOut39,40
+instance Functor Functor f => Functor (LiftItOut f)41,42
+  fmap fmap42,43
+data Parappa Parappa46,47
+data Parappa f g a = DaWrappa DaWrappa46,47
+instance (F(Functor f, Functor f1) => Functor (Parappa f f1)48,49
+  fmap fmap49,50
+data IgnoreOne IgnoreOne53,54
+data IgnoreOne f g a b = IgnoringSomething IgnoringSomething53,54
+instance Functor Functor g => Functor (IgnoreOne f g a)55,56
+  fmap fmap56,57
+data Notorious Notorious60,61
+data Notorious g o a t = Notorious Notorious60,61
+instance Functor Functor f => Functor (Notorious f a b)62,63
+  fmap fmap63,64
+data List List67,68
+data List a = NilNil67,68
+            | Cons Cons68,69
+instance Functor Functor List70,71
+  fmap fmap71,72
+data GoatLord GoatLord76,77
+data GoatLord a = NoGoatNoGoat76,77
+                | OneGoat OneGoat77,78
+                | MoreGoats MoreGoats78,79
+instance Functor Functor GoatLord80,81
+  fmap fmap81,82
+data TalkToMe TalkToMe87,88
+data TalkToMe a = HaltHalt87,88
+                | Print Print88,89
+                | Read Read89,90
+instance Functor Functor TalkToMe91,92
+  fmap fmap92,93
+
+./haskellbook/16/16.17-chapter-exercises-2.hs,464
+data Sum Sum5,6
+data Sum b a = First First5,6
+             | Second Second6,7
+instance Functor Functor (Sum e)8,9
+  fmap fmap9,10
+data Company Company14,15
+data Company a c b = DeepBlue DeepBlue14,15
+                   | Something Something15,16
+instance Functor Functor (Company e e')17,18
+  fmap fmap18,19
+data More More23,24
+data More b a = L L23,24
+              | R R24,25
+instance Functor Functor (More x)27,28
+  fmap fmap28,29
+
+./haskellbook/16/16.11-short-exercise.hs,350
+incIfRight incIfRight0,1
+showIfRight showIfRight4,5
+incEither incEither8,9
+showEither showEither11,12
+liftedInc liftedInc14,15
+liftedShow liftedShow17,18
+data Sum Sum22,23
+data Sum a b = First First22,23
+             | Second Second23,24
+instance Functor Functor (Sum a)26,27
+  fmap fmap27,28
+applyIfSecond applyIfSecond30,31

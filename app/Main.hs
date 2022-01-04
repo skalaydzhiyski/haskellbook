@@ -1,61 +1,18 @@
-import Data.Char
-import Data.List
-import Data.Ord
+module Main where
 
-type Digit   = Char     -- the first digit on a keypad button
-type Options = String   -- list of options for a given keypad button
-type Presses = Int
-type Button  = (Digit, Options)
+-- Hutton's Razor
+-- recursive data structures
+data Expr =
+    Lit Integer
+  | Add Expr Expr
 
-data Phone = Phone [Button] deriving (Show)
+eval :: Expr -> Integer
+eval (Lit x) = x
+eval (Add left right) = (eval left) + (eval right)
 
-type Action  = (Digit, Presses)
-
-options :: [Options]
-options = ["1", "abc2", "def3", "ghi4", "jkl5", "mno6", "pqrs7", "tuv8", "wxyz9", "*^", "+ 0", "#.,"]
-
-digits :: [Digit]
-digits  = "123456789*0#"
-
-upper :: Action
-upper = ('*',1)
-
-phone = Phone (zip digits options)
-
-findButton :: Phone -> Char -> Button
-findButton (Phone (x:xs)) c
-  | elem c $ snd x = x
-  | otherwise      = findButton (Phone xs) c
-
-makeAction :: Button -> Char -> Action
-makeAction (btn,chars) c_ = case elemIndex c_ chars of
-                              Nothing -> error "No char"
-                              Just v  -> (btn, v+1)
-
-parseChar :: Phone -> Char -> [Action]
-parseChar p@(Phone buttons) c
-  | isLower c = [makeAction (findButton p c) c]
-  | otherwise = upper:[makeAction (findButton p lower) lower]
-  where lower = toLower c
-
-fingerTap :: [Action] -> Presses
-fingerTap lst = sum (map snd lst)
-
-freq :: String -> [(Char, Int)]
-freq s = map (\x -> (head x, length x)) $ group . sort $ s
-
-mostCommonChar :: String -> Char 
-mostCommonChar s = chars !! (snd $ maximumBy (comparing fst) $ zip counts [0..])
-  where freqs  = freq s
-        chars  = map fst $ freqs
-        counts = map snd $ freqs
-
-
-
-
-solve :: Phone -> String -> [Action]
-solve p s = concat $ map (parseChar p) s
-
+print_ :: Expr -> String
+print_ (Lit x) = show x
+print_ (Add left right) = print_ left ++ "+" ++ print_ right
 
 main :: IO ()
 main = undefined
