@@ -29,7 +29,9 @@ library
       BinaryTree
       Cipher
       CipherKeyword
+      Hutton
       Lib
+      Phone
   other-modules:
       Paths_hb
   hs-source-dirs:

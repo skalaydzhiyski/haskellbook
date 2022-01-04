@@ -1,18 +1,12 @@
 module Main where
+import Data.List (intercalate)
 
--- Hutton's Razor
--- recursive data structures
-data Expr =
-    Lit Integer
-  | Add Expr Expr
+notThe :: String -> Maybe String
+notThe "the" = Just "a"
+notThe x = Just x
 
-eval :: Expr -> Integer
-eval (Lit x) = x
-eval (Add left right) = (eval left) + (eval right)
-
-print_ :: Expr -> String
-print_ (Lit x) = show x
-print_ (Add left right) = print_ left ++ "+" ++ print_ right
+replaceThe :: String -> String
+replaceThe s = undefined
 
 main :: IO ()
 main = undefined
