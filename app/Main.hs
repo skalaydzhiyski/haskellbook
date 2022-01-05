@@ -1,12 +1,6 @@
 module Main where
-import Data.List (intercalate)
 
-notThe :: String -> Maybe String
-notThe "the" = Just "a"
-notThe x = Just x
-
-replaceThe :: String -> String
-replaceThe s = undefined
+-- TODO: Continue the chapter for building projects from the book.
 
 main :: IO ()
 main = undefined
