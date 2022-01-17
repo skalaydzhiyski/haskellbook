@@ -1,4 +1,4 @@
-module TackingAdversity_Unfolds where
+module TacklingAdversity_Unfolds where
 
 import Data.List
 
