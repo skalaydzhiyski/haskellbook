@@ -2,7 +2,9 @@
 {-# LANGUAGE FlexibleContexts #-}
 module Main where
 
+import Data.Coerce
 import Data.Monoid
+
 {-
 ---------------------- Semigroups ------------------------------------------
 --
@@ -46,6 +48,20 @@ instance Num a => Semigroup (Product a) where
   (<>) = (*)
 instance Num a => Monoid (Product a) where
   mempty = 1
+
+-- Booleans
+newtype All = All { getAll :: Bool } deriving (Show, Eq, Ord, Bounded)
+newtype Any = Any { getAny :: Bool } deriving (Show, Eq, Ord, Bounded)
+
+instance Semigroup All where
+  (<>) = coerce (&&)
+instance Monoid All where
+  mempty = All True
+
+instance Semigroup Any where
+  (<>) = coerce (||)
+instance Monoid Any where
+  mempty = Any False
 -}
 
 -- examples for monoidal laws
@@ -69,6 +85,43 @@ concat_sum = mconcat [Sum 2, Sum 3, Sum 4]
 concat_prd = mconcat [Product 2, Product 3, Product 4]
 concat_lst = mconcat [[1,2], [2,3], [4,5]]
 concat_str = mconcat ["ab", "cd", "ef"]
+
+concat_bool = mconcat [All True, All True, All False]
+concat_bool2 = mconcat [Any True, Any True, Any False]
+
+------------------------------------ The Maybe Monoid -----------------------------------------------------
+
+append_maybe = First (Just 1) <> First (Just 2)
+append_maybe2 = Last (Just 1) <> Last (Just 2)
+concat_maybe = mconcat [First (Just 1) , First (Just 2), First (Just 3)]
+concat_maybe2 = mconcat [Last (Just 1) , Last (Just 2), Last (Nothing)]
+
+-- + Advanced example of another Maybe monoind
+--
+-- combining values of Maybe ..
+data Optional a =
+    Nada
+  | Only a
+  deriving (Eq, Show)
+
+instance Semigroup a => Semigroup (Optional a) where
+  (Only left) <> (Only right) = Only (left <> right)
+  left <> Nada = left
+  Nada <> right = right
+
+instance Monoid a => Monoid (Optional a) where
+  mempty  = Nada
+
+-- mad libs exercise
+
+type Exclamation = String
+type Adverb = String
+type Noun = String
+type Adjective = String
+
+madlibbin :: Excalamation -> Adverb -> Noun -> Adjective -> String
+madlibbin e adv noun adj =
+
 
 main :: IO ()
 main = undefined
