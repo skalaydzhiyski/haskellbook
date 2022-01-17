@@ -4,6 +4,8 @@ module Main where
 
 import Data.Coerce
 import Data.Monoid
+import Test.Hspec
+import Test.QuickCheck
 
 {-
 ---------------------- Semigroups ------------------------------------------
@@ -119,10 +121,74 @@ type Adverb = String
 type Noun = String
 type Adjective = String
 
-madlibbin :: Excalamation -> Adverb -> Noun -> Adjective -> String
-madlibbin e adv noun adj =
+-- ignore exercise too much typeing
+madlibbin :: Exclamation -> Adverb -> Noun -> Adjective -> String
+madlibbin e adv noun adj = undefined -- solution is to combine all strings and arguments in list and do mconcat :/
 
+-- testing associativity with Quickcheck
+
+asc :: (Eq a) => (a -> a -> a) -> a -> a -> a -> Bool
+asc f a b c = f (f a b) c == f a (f b c)
+
+monoidAsc :: (Eq m, Monoid m) => m -> m -> m -> Bool
+monoidAsc a b c = (a <> (b <>c)) == ((a <> b) <> c)
+
+checkIdent :: (Eq m, Monoid m) => m -> Bool
+checkIdent x = left == right && left == x
+  where left = mempty <> x
+        right = x <> mempty
+
+
+qc :: IO ()
+qc = hspec $ do
+  describe "Addition" $ do
+    it "1 + 1 is greater than 1" $ do
+      (1+1) > 1 `shouldBe` True
+  describe "Subtraction" $ do
+    it "1 + 1 is 0" $ do
+      (1-1) == 0 `shouldBe` True
+    it "all x+1 bigger than x" $ do
+      property $ \x -> x + 1 > (x :: Int)
+
+
+-- last exercises on chapter 15
+
+data Trivial = Trivial deriving (Eq, Show)
+
+instance Semigroup Trivial where
+  _ <> _ = Trivial
+
+instance Arbitrary Trivial where
+  arbitrary = return Trivial
+
+semigroupAssoc :: (Eq m, Semigroup m) => m -> m -> m -> Bool
+semigroupAssoc a b c = (a <> (b <> c)) == ((a <> b) <> c)
+
+type TrivAssoc = Trivial -> Trivial -> Trivial -> Bool
+qc_triv = do
+  quickCheck (semigroupAssoc :: TrivAssoc)
+
+
+newtype Mem s a = Mem { runMem :: s -> (a, s) }
+
+instance Semigroup a => Semigroup (Mem s a) where
+  Mem f <> Mem f' = Mem $ func
+    where func = \x -> ((fst . f) x <> (fst . f') x,
+                         snd . f' . snd . f $ x)
+
+instance Monoid a => Monoid (Mem s a) where
+  mempty = Mem (\x -> (mempty, x))
+
+f' = Mem $ \x -> ("hi", x + 1)
 
 main :: IO ()
-main = undefined
+main = do
+  let rmzero  = runMem mempty         0
+      rmleft  = runMem (f' <> mempty) 0
+      rmright = runMem (mempty <> f') 0
+  print $ rmleft                    -- ("hi", 1)
+  print $ rmright                   -- ("hi", 1)
+  print $ (rmzero :: (String, Int)) -- ("", 0)
+  print $ rmleft  == runMem f' 0    -- True
+  print $ rmright == runMem f' 0    -- True
 
