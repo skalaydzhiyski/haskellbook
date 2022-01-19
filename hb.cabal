@@ -29,8 +29,10 @@ library
       BinaryTree
       Cipher
       CipherKeyword
+      Functor
       Hutton
       Lib
+      Monoid_Semigroup
       Phone
       TacklingAdversity_Unfolds
   other-modules:
