@@ -11,5 +11,9 @@ e :: IO Integer
 e = let ioi = readIO "1" :: IO Integer
      in (*3) <$> read <$> ("123" ++) <$> (show <$> ioi)
 
+functorIdent :: (Functor f, Eq (f a)) => f a -> Bool
+functorIdent f = fmap id f == id f
 
--- continue from here after the interview
+functorCompose :: (Eq (f c), Functor f) => (b -> c) -> (a -> b) -> f a -> Bool
+functorCompose g f x = (fmap g (fmap f x)) == fmap (g.f) x
+
