@@ -168,13 +168,13 @@ type TrivAssoc = Trivial -> Trivial -> Trivial -> Bool
 qc_triv = do
   quickCheck (semigroupAssoc :: TrivAssoc)
 
-
 newtype Mem s a = Mem { runMem :: s -> (a, s) }
-
 instance Semigroup a => Semigroup (Mem s a) where
   Mem f <> Mem f' = Mem $ func
-    where func = \x -> ((fst . f) x <> (fst . f') x,
-                         snd . f' . snd . f $ x)
+    where func = \x -> (firstf x <> firstf' x, second x)
+          firstf  = fst . f
+          firstf' = fst . f'
+          second  = snd . f' . snd . f
 
 instance Monoid a => Monoid (Mem s a) where
   mempty = Mem (\x -> (mempty, x))

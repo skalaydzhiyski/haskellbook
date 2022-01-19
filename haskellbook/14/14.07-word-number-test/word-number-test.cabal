@@ -1,0 +1,24 @@
+name:                word-number-test
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/evturn/haskellbook
+license:             BSD3
+license-file:        LICENSE
+author:              Evan Turner
+maintainer:          ev@evturn.com
+copyright:           Copyright: (c) 2017 Evan Turner
+category:            Web
+build-type:          Simple
+extra-source-files:  README.md
+cabal-version:       >=1.10
+
+library
+  exposed-modules:     WordNumber
+                     , WordNumberTest
+  ghc-options:         -Wall -fwarn-tabs
+  hs-source-dirs:      src
+                     , test
+  build-depends:       base >= 4.7 && < 5
+                     , hspec
+  default-language:    Haskell2010
