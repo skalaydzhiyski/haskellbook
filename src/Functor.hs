@@ -1,3 +1,4 @@
+{-# LANGUAGE RankNTypes #-}
 module Functor where
 
 import Test.QuickCheck
@@ -77,5 +78,34 @@ data Wrap f a = Wrap (f a) deriving (Eq, Show)
 instance Functor f => Functor (Wrap f) where
   fmap func (Wrap f) = Wrap (fmap func f)
 
+-- IO Functor
 
--- TODO: continue here with the IO functor part from the book
+func1 :: IO String
+func1 = do
+  line <- getLine
+  return (line ++ " and me too!")
+
+-- Let's try and keep the values, but change the structure (opposite of fmap) well ...
+-- this does not work :/
+--    nat :: (f -> g) -> f a -> g a
+--    nat = undefined
+-- alternative:
+
+-- this is coming from RankNTypes language extension
+funcAllowed :: forall a . Maybe a -> [a]
+funcAllowed Nothing  = []
+funcAllowed (Just x) = [x]
+
+-- This does not and SHOULD NOT work ! The main purpose of the function is to NOT change concrete values, just the structure around them.
+-- funcNotAllowed :: Num a => forall a . Maybe a -> [a]
+-- funcNotAllowed Nothing  = []
+-- funcNotAllowed (Just x) = [x+1]
+number :: Int
+number = 120
+
+func :: Int -> Maybe String
+func x = if number /= 1280 then (Just "something") else Nothing
+
+
+-- TODO: Continue from the chapter exercise tomorrow whne you come back to working with Haskell brother.
+
