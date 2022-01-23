@@ -1,8 +1,10 @@
 {-# LANGUAGE RankNTypes #-}
+{-# LANGUAGE FlexibleInstances #-}
 module Functor where
 
 import Test.QuickCheck
 import Test.QuickCheck.Function
+import GHC.Arr
 
 replaceWithP = (\_ -> 'p')
 dat          = [Just "something", Nothing, Just "something else"]
@@ -96,16 +98,123 @@ funcAllowed :: forall a . Maybe a -> [a]
 funcAllowed Nothing  = []
 funcAllowed (Just x) = [x]
 
--- This does not and SHOULD NOT work ! The main purpose of the function is to NOT change concrete values, just the structure around them.
--- funcNotAllowed :: Num a => forall a . Maybe a -> [a]
--- funcNotAllowed Nothing  = []
--- funcNotAllowed (Just x) = [x+1]
-number :: Int
-number = 120
 
-func :: Int -> Maybe String
-func x = if number /= 1280 then (Just "something") else Nothing
+-- Chapter exercises
+--
+newtype Mu f = InF { outF :: f (Mu f) } -- nope (kind (* -> *) -> *)
+data D = D (Array Word Word) Int Int    -- nope (kind *)
+
+-- rearrange type constrctor args
+data S b a =
+    Fst a
+  | Snd b
+  deriving (Show, Eq)
+
+instance Functor (S a) where
+  fmap f (Fst a) = Fst (f a)
+  fmap f (Snd b) = Snd b
 
 
--- TODO: Continue from the chapter exercise tomorrow whne you come back to working with Haskell brother.
+data Company a c b =
+    DeepBlue a c
+  | Something b
+  deriving (Eq, Show)
+
+instance Functor (Company e e') where
+  fmap f (DeepBlue a c) = DeepBlue a c
+  fmap f (Something b) = Something (f b)
+
+
+data More b a =
+    L a b a
+  | R b a b
+  deriving (Eq, Show)
+
+instance Functor (More x) where
+  fmap f (L a b a') = L (f a) b (f a')
+  fmap f (R b a b') = R b (f a) b'
+
+data Quant a b =
+    Finance
+  | Desk    a
+  | Floor   b
+  deriving (Eq, Show)
+
+instance Functor (Quant a) where
+  fmap f Finance = Finance
+  fmap f (Desk a) = Desk a
+  fmap f (Floor b) = Floor (f b)
+
+newtype Flip f a b =
+  Flip (f b a)
+  deriving (Eq, Show)
+
+func :: Num a => String -> String -> Integer -> [a]
+func = undefined
+
+newtype K a b = K a
+  deriving (Eq, Show)
+
+-- cool, but very hack -> very rarely do that in production
+instance Functor (Flip K a) where
+  fmap f (Flip (K x)) = Flip (K (f x))
+
+
+data Evil a b = Evil b
+  deriving (Eq, Show)
+
+instance Functor (Evil a) where
+  fmap f (Evil b) = Evil (f b)
+
+data LiftItOut f a = LiftItOut (f a)
+  deriving (Eq, Show)
+
+instance Functor functor => Functor (LiftItOut functor) where
+  fmap f (LiftItOut ftor) = LiftItOut (fmap f ftor)
+
+data Parappa f g a =
+  Wrapper (f a) (g a)
+  deriving (Eq, Show)
+
+instance (Functor f, Functor g) => Functor (Parappa f g) where
+  fmap f (Wrapper left right) = Wrapper (fmap f left) (fmap f right)
+
+data IgnoreOne f g a b = IgnoreSomething (f a) (g b)
+  deriving (Eq, Show)
+
+instance Functor g => Functor (IgnoreOne f g a) where
+  fmap f (IgnoreSomething left right) = IgnoreSomething left (fmap f right)
+
+data List a = Nil | Cons a (List a)
+  deriving (Eq, Show)
+
+instance Functor List where
+  fmap f Nil = Nil
+  fmap f (Cons x rem) = Cons (f x) (fmap f rem)
+
+data GoatLord a =
+    NoGoat
+  | Goat a
+  | MoreGoats (GoatLord a) (GoatLord a) (GoatLord a)
+  deriving (Eq, Show)
+
+instance Functor GoatLord where
+  fmap f NoGoat            = NoGoat
+  fmap f (Goat a)          = Goat (f a)
+  fmap f (MoreGoats x y z) = MoreGoats (fmap f x) (fmap f y) (fmap f z)
+
+-- last
+data TalkToMe a =
+    Halt
+  | Print String a
+  | Read (String -> a)
+
+instance Functor TalkToMe where
+  fmap f Halt = Halt
+  fmap f (Print s x) = Print s (f x)
+  fmap f (Read func) = Read (fmap f func)
+
+-- done!
+
+
 
