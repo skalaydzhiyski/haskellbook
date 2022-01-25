@@ -22,7 +22,7 @@ isSubseqOf l1@(x:xs) l2@(y:ys)
 
 capitailizeWords :: String -> [(String, String)]
 capitailizeWords s = map capitalizeToTuple $ words s
-  where capitalizeToTuple word@(c:cs) = 
+  where capitalizeToTuple word@(c:cs) =
           let upperFirst = chr $ (ord c) - 32
            in (upperFirst:cs, word)
 
