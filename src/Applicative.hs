@@ -10,11 +10,6 @@ newtype Identity a = Identity a
 instance Functor Identity where
   fmap f (Identity x) = Identity (f x)
 
--- TODO: read more exactly what the Identity type mean.
-instance Applicative Identity where
-  pure  = Identity
-  (Identity f) <*> (Identity x) = Identity (f x)
-
 instance Applicative Identity where
   pure = Identity
   Identity f <*> Identity x = Identity $ f x
