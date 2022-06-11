@@ -78,7 +78,7 @@ instance Arbitrary b => Arbitrary (Sum a b) where
 -- Wrapped functors
 data Wrap f a = Wrap (f a) deriving (Eq, Show)
 instance Functor f => Functor (Wrap f) where
-  fmap func (Wrap f) = Wrap (fmap func f)
+  fmap func_ (Wrap f) = Wrap (fmap func_ f)
 
 -- IO Functor
 
@@ -149,8 +149,8 @@ newtype Flip f a b =
   Flip (f b a)
   deriving (Eq, Show)
 
-func :: Num a => String -> String -> Integer -> [a]
-func = undefined
+func_ :: Num a => String -> String -> Integer -> [a]
+func_ = undefined
 
 newtype K a b = K a
   deriving (Eq, Show)
@@ -215,6 +215,5 @@ instance Functor TalkToMe where
   fmap f (Read func) = Read (fmap f func)
 
 -- done!
-
 
 

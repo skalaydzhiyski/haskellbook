@@ -1,7 +1,13 @@
 module Main where
 
+import Control.Monad (join)
 
--- write test code here
+-- this is basically (flip (>>=)) for when testing exmaples.
+bind :: Monad m => (a -> m b) -> m a -> m b
+bind f mx = undefined
+
 
 main :: IO ()
-main = undefined
+main = do
+  putStrLn "working brother"
+

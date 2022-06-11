@@ -7,7 +7,7 @@ data Tree a =
 
 mapTree :: (a -> b) -> Tree a -> Tree b
 mapTree _ Leaf = Leaf
-mapTree f (Node left value right) = 
+mapTree f (Node left value right) =
   Node (mapTree f left) (f value) (mapTree f right)
 
 testTree :: Tree Integer

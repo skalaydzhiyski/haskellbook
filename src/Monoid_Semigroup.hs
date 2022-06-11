@@ -17,11 +17,12 @@ import Data.Monoid hiding (Monoid(..), (<>), Sum(..), Product(..))
 class Semigroup a where
   (<>) :: a -> a -> a
 
--- example: for the case of the type List - the binary operator is concatenation (++)
+-- example: for the case of the type List - the binary operator is concatenation ++ for lists
 instance Semigroup [a] where
-  (<>) = (++)
+  (<>) = (++) -- this should always be associative. Example: ([1] ++ [2]) ++ [3] == [1] ++ ([2] ++ [3])
+
 instance Monoid [a] where
-  mempty = []
+  mempty = [] -- this should be always be commutative Example: [] ++ [1,2,3] == [1,2,3] ++ []
   -- we don't need anything else, since mappend (<>) is already defined in the Semigroup instance for list!
 
 -- example: for a new type we want to convert to semigroup - just implement (<>)
