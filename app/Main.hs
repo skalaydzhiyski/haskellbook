@@ -3,7 +3,7 @@ module Main where
 {-# language SomethingHere #-}
 
 import Prelude hiding (lookup)
-import Control.Monad (join)
+import Control.Monad (join, (>=>))
 import Data.Map (fromList, lookup)
 
 
@@ -151,25 +151,14 @@ list'' =
     \x -> show x >>=
       \y -> "number: " ++ [y] ++ ", " >>=
         return
-
 -- -------------------------------------
 
--- original
-f = [x | x <- [1..3], _ <- ["first", "second"]]
+-- Implementation of Kliesli composition (>=>)
+mcomp :: Monad m => (b -> m c) -> (a -> m b) -> (a -> m c)
+mcomp f g x = g x >>= f
 
--- desugaring level 1
-f' = do
-  x <- [1..3]
-  _ <- ["first", "second"]
-  return x
-
--- desugaring level 2
-f'' =
-  [1..3] >>=
-    \x -> ["first", "second"] >>=
-      \_ -> return x
-
--- TODO: Continue here trying to understand Monadic composition.
+mcomp' :: Monad m => (a -> m b) -> (b -> m c) -> (a -> m c)
+mcomp' = (>=>)
 
 
 main :: IO ()
