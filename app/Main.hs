@@ -160,8 +160,37 @@ mcomp f g x = g x >>= f
 mcomp' :: Monad m => (a -> m b) -> (b -> m c) -> (a -> m c)
 mcomp' = (>=>)
 
+-- more examples
+sayHi :: String -> IO String
+sayHi greeting = do
+  putStrLn greeting
+  getLine
+
+readM :: Read a => String -> IO a
+readM = return . read
+
+-- exercises
+data Nope a = NopeDotJpg
+
+data BahEither b a = Pleft a | Pright b
+
+data Identity a = Identity a
+  deriving (Eq, Ord, Show)
+
+instance Functor Identity where
+  fmap = undefined
+
+instance Applicative Identity where
+  pure = undefined
+  left <*> right = undefined
+
+instance Monad Identity where
+  return = pure
+  idval >>= f = undefined
+
 
 main :: IO ()
 main = do
   number <- getLine
   putStrLn "working brother"
+
