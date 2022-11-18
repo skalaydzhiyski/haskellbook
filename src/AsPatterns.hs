@@ -10,7 +10,6 @@ f1 xs@(x,_) = do
   print x
   return xs
 
-
 doubleUp :: [a] -> [a]
 doubleUp lst@(x:_) = x : lst
 

@@ -16,7 +16,7 @@ replaceThe s = intercalate " " $ map (replace_ . notThe) $ words s
 
 -- +
 
-newtype Word' = Word' String deriving (Show, Eq) 
+newtype Word' = Word' String deriving (Show, Eq)
 
 vowels = "aeiou"
 
@@ -35,27 +35,27 @@ data Nat =  Zero
           | Succ Nat
           deriving (Show, Eq)
 
-natToInteger :: Nat -> Integer 
+natToInteger :: Nat -> Integer
 natToInteger Zero = 0
 natToInteger (Succ x) = 1 + natToInteger x
 
 -- +
 
-isJust :: Maybe a -> Bool 
-isJust (Just x) = True 
+isJust :: Maybe a -> Bool
+isJust (Just x) = True
 _             = False
 
-isNothing :: Maybe a -> Bool 
-isNothing Nothing = True 
+isNothing :: Maybe a -> Bool
+isNothing Nothing = True
 _             = False
 
 
 maybe_ :: b -> (a -> b) -> Maybe a -> b
 maybe_ x _ Nothing  = x
-maybe_ _ f (Just x) = f x 
+maybe_ _ f (Just x) = f x
 
 fromMaybe_ :: a -> Maybe a -> a
-fromMaybe_ d Nothing  = d 
+fromMaybe_ d Nothing  = d
 fromMaybe_ _ (Just x) = x
 
 catMaybes :: [Maybe a] -> [a]
@@ -85,7 +85,7 @@ flipMaybe = foldr go (Just [])
 -- +
 
 lefts' :: [Either a b] -> [a]
-lefts' = foldr (\x y -> case x of 
+lefts' = foldr (\x y -> case x of
                           Left l  -> l:y
                           Right _ -> y) []
 
@@ -102,7 +102,7 @@ partitionEithers'' :: [Either a b] -> ([a], [b])
 partitionEithers'' = foldr go ([],[])
   where go (Left x) (l,r)  = (x:l,r)
         go (Right x) (l,r) = (l,x:r)
- 
+
 eitherMaybe' :: (b -> c) -> Either a b -> Maybe c
 eitherMaybe' f (Right x) = Just (f x)
 eitherMaybe' _ _ = Nothing

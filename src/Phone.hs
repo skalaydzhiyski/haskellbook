@@ -1,4 +1,4 @@
-module Phone where 
+module Phone where
 import Data.Char
 import Data.List
 import Data.Ord
@@ -45,7 +45,7 @@ fingerTap lst = sum (map snd lst)
 freq :: String -> [(Char, Int)]
 freq s = map (\x -> (head x, length x)) $ group . sort $ s
 
-mostCommonChar :: String -> Char 
+mostCommonChar :: String -> Char
 mostCommonChar s = chars !! (snd $ maximumBy (comparing fst) $ zip counts [0..])
   where freqs  = freq s
         chars  = map fst $ freqs

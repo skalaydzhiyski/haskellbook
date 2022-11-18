@@ -188,6 +188,14 @@ instance Monad Identity where
   return = pure
   idval >>= f = undefined
 
+-- delete from here
+data Something a = Something {getA :: a, getMsg :: String}
+  deriving (Show, Eq)
+
+instance Num a => Semigroup (Something a) where
+  (Something lv lm) <> (Something rv rm) = Something (lv + rv) (lm ++ rm)
+
+-- TODO: continue from here when you're coming back to monads brother.
 
 main :: IO ()
 main = do
