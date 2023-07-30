@@ -5,6 +5,9 @@ data Tree a =
   | Node (Tree a) a (Tree a)
   deriving (Eq, Ord, Show)
 
+f :: Integer -> Integer
+f x = x + 1
+
 mapTree :: (a -> b) -> Tree a -> Tree b
 mapTree _ Leaf = Leaf
 mapTree f (Node left value right) =

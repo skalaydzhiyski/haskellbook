@@ -14,6 +14,9 @@ shift f x = if res >= start && res <= end then res else start + (res - start) `m
         offset = snd x
         res    = cord `f` offset
 
+f :: Int -> Integer -> (Int, Int)
+f x y = undefined
+
 encrypt :: String -> String
 encrypt s = map (chr . shift (+)) $ mapping s
 

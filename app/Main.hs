@@ -11,7 +11,6 @@ import Data.Map (fromList, lookup)
 bind :: Monad m => (a -> m b) -> m a -> m b
 bind f mx = join $ fmap f mx
 
-
 -- binding and binding' should have the output in the console
 binding :: IO ()
 binding = do
@@ -135,7 +134,6 @@ instance Monad (Sum a) where
 -- The Beauty of Haskell --------------
 list :: String
 list = [z | x <- [1..3], y <- show x, z <- "number: " ++ [y] ++ ", "]
-
 -- desugaring level 1
 list' :: String
 list' = do
@@ -143,7 +141,6 @@ list' = do
   y <- show x
   z <- "number: " ++ [y] ++ ", "
   return z
-
 -- desugaring level 2
 list'' :: String
 list'' =
@@ -188,14 +185,11 @@ instance Monad Identity where
   return = pure
   idval >>= f = undefined
 
--- delete from here
-data Something a = Something {getA :: a, getMsg :: String}
-  deriving (Show, Eq)
+-- TODO: continue here when you're coming back to Applicatives and Monads
+--       and try to make sure you understand Functor/Applicative/Monad
+--       perfectly ! Once we've learned Haskell, we can delve into Plutus again.
 
-instance Num a => Semigroup (Something a) where
-  (Something lv lm) <> (Something rv rm) = Something (lv + rv) (lm ++ rm)
-
--- TODO: continue from here when you're coming back to monads brother.
+f x y = 128 + x + y
 
 main :: IO ()
 main = do

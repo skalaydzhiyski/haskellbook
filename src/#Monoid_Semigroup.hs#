@@ -149,6 +149,8 @@ qc = hspec $ do
       (1-1) == 0 `shouldBe` True
     it "all x+1 bigger than x" $ do
       property $ \x -> x + 1 > (x :: Int)
+  
+
 
 -- last exercises of chapter 15
 
@@ -190,3 +192,4 @@ run_test = do
   print $ (rmzero :: (String, Int)) -- ("", 0)
   print $ rmleft  == runMem f' 0    -- True
   print $ rmright == runMem f' 0    -- True
+

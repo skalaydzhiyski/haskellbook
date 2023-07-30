@@ -13,10 +13,6 @@ l2           = fmap replaceWithP dat
 l3           = (fmap.fmap) replaceWithP dat
 l4           = (fmap.fmap.fmap) replaceWithP dat
 
-func :: String -> String -> (Int, Int)
-func :: undefined
-
-
 e :: IO Integer
 e = let ioi = readIO "1" :: IO Integer
      in (*3) <$> read <$> ("123" ++) <$> (show <$> ioi)
@@ -33,7 +29,6 @@ instance Functor Identity where
 instance Arbitrary a => Arbitrary (Identity a) where
   arbitrary = do
     x <- arbitrary
-
     return $ Identity x
 
 data Pair a = Pair a a deriving (Eq, Show)

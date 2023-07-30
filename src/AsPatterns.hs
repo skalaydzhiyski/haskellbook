@@ -9,6 +9,7 @@ f1 :: Show a => (a,b) -> IO (a,b)
 f1 xs@(x,_) = do
   print x
   return xs
+  -- with thi sbrother 
 
 doubleUp :: [a] -> [a]
 doubleUp lst@(x:_) = x : lst
