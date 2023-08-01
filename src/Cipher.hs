@@ -8,6 +8,7 @@ start = ord 'a'
 end   = ord 'z'
 mapping s = zip s (concat cipher)
 
+
 shift :: (Int -> Int -> Int) -> (Char, Int) -> Int
 shift f x = if res >= start && res <= end then res else start + (res - start) `mod` 26
   where cord   = ord $ fst x

@@ -5,7 +5,7 @@ import Data.Ord
 
 type Digit   = Char     -- the first digit on a keypad button
 type Options = String   -- list of options for a given keypad button
-type Presses = Int
+type Presses = Int      -- the number of digits pressed by the user.
 type Button  = (Digit, Options)
 
 data Phone = Phone [Button] deriving (Show)
